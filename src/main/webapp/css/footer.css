@@ -1,0 +1,202 @@
+footer
+{
+    /* 底部栏 */
+    height: 80px;
+    width: 100vw;
+    padding: 0;
+}
+.footer_list
+{
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background-color: #fff;
+}
+.footer-btn
+{
+    height: 80px;
+    display: flex;
+
+
+
+}
+.footer-btn a
+{
+    font-size: 39px;
+    margin: 10px 20px;
+
+
+}
+.footer-btn a:hover
+{
+    color:#43929e;
+
+}
+.footer-btn .like
+{
+    margin-left:0 ;
+    margin-right: 300px;
+    font-size: 19px;
+    margin-top:10px; ;
+
+}
+.footer-btn .music-list
+{
+
+    font-size: 23px;
+    margin-top:15px;
+    margin-left: 350px;
+
+}
+.footer-btn .loudness
+{
+
+    font-size: 24px;
+
+}
+.footer-btn .model
+{
+    margin-top: 20px;
+    font-size: 17px;
+}
+.footer-btn .china
+{
+    list-style: none;
+    width: 90px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.footer-btn a div
+{
+    background: url(../img/music7.png);
+    height: 60px;
+    width: 60px;
+    font-size: 17px;
+}
+.play-part
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.audio-bottom
+{
+    height: 10px;
+    display: flex;
+    margin-left: 210px;
+
+}
+/* 进度条和原点 */
+.process-bar-bg
+{
+    position: relative;
+    background-color: rgba(122, 183, 196, 0.247);
+    height: 2px;
+    width: 40vw;
+    cursor: pointer;
+
+}
+.music-frame
+{
+    width: 400px;
+    position: absolute;
+    height: 630px;
+    background: white;
+    box-shadow: rgba(164, 184, 164, 0.45) 1px 1px 1px 1px;
+    bottom: 80px;
+    right: 0;
+}
+.music-broadcast
+{
+
+    height: 600px;
+    width: 400px;
+
+}
+
+.process-bar
+{
+    background-color: #43929efc;
+    width: 0;
+    height: 2px;
+}
+.audio-length-current, .audio-length-total
+{
+    line-height: 3px;
+    color: #aba0a0;
+    font-size: 7px;
+}
+.process-bar-bg span
+{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color:rgba(32, 173, 124, 0.723);
+    position: absolute;
+    left: 0;
+    top: -4px;
+    cursor: pointer;
+
+}
+#controlVolume:hover  #volumeBarBgBorder
+{
+    display: flex;
+}
+#volumeBarBgBorder:hover
+{
+    display: flex;
+}
+#volumeBarBgBorder
+{
+
+    position: absolute;
+    background: white;
+    height: 90px;
+    padding: 3px;
+    width: 15px;
+    box-shadow: black 1px 1px 1px 1px;
+    display: none;
+    top:-90px;
+    justify-content: center;
+    align-items: center;
+}
+#controlVolume  .loudness
+{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
+#controlVolume
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    height: 30px;
+    width:30px;
+    margin-right: 150px;
+
+
+
+}
+
+#volumeBar
+{
+    background: #dff1ff;
+    height: 0px;
+    width: 3px;
+}
+#volumeBarBg
+{
+    position: relative;
+    height: 80px;
+    width: 3px;
+    background: #3DC07D;
+    cursor: pointer;
+}
+
+
+

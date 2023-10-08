@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
 
 </head>
@@ -197,20 +200,9 @@
                             </div>
                         </div>
                         <a href="#" class="loudness iconfont icon-yinliang"></a>
-                    </div>
-                    <div class="music-frame">
-
-                            <ul class="music-broadcast">
-                                <div>
-                                    当前播放
-                                </div>
-                                <li>
-
-                                </li>
-                            </ul>
-
                         <a href="#" class="music-list iconfont icon-ks3_music"></a>
                     </div>
+
                     <audio>
                         <source  type="audio/mp3">
                     </audio>
@@ -222,6 +214,44 @@
                         </div>
                         <span class="audio-length-total" id="totalTime">00:00</span>
                     </div>
+                    <div class="music-frame">
+
+                        <div class="music-broadcast" style="margin-left: 20px;margin-top: 20px;">
+                            <div class="now-play" style="font-size: 20px;font-weight: bolder;margin-bottom: 20px;">
+                                当前播放
+                            </div>
+                            <div style="display: flex; line-height: 20px;margin-bottom: 10px; ">
+                                <div style="font-size: 13px;color: #a6b0ba; margin-right: 250px;" >
+                                    总共35首
+                                </div>
+                                <div style="color: #7ba4ac;font-size: 15px;">
+                                    清空列表
+                                </div>
+                            </div>
+                            <div style="height: 1px;width: 100%;background: #d0d5ca;margin-bottom: 10px;">
+
+                            </div>
+                            <ul id="musicListLi" style="overflow-y: scroll;">
+
+                                <li style="width: 100%;height: 30px;line-height: 30px;background: rgba(219,219,213,0.43)" >
+                                    <span style="margin-right: 140px;">
+                                        白山茶
+                                    </span>
+                                    <span style="margin-right: 80px;color: #7c8892;">
+                                        陈雪凝
+                                    </span>
+                                    <span style="color: #d0d5ca; font-size: 13px;">
+                                        3:12
+                                    </span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
             </div>
@@ -232,7 +262,7 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    alert("欢迎回来");
+
     axios.post("http://localhost:8080/web-demo/userCopy/userInfo").then(function (response) {
         var data=response.data;
         var img=document.getElementById('avatar');
@@ -248,5 +278,8 @@
 
 </script>
 <script type="text/javascript" src="js/music.js"></script>
+<script>
+    alert("欢迎回来");
+</script>
 </body>
 </html>

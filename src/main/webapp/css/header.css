@@ -1,0 +1,171 @@
+/* 去掉内边距和外边距 */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    /* 设置最小宽度    */
+    height: 100%;
+    color:#333;
+    font-size: 15px;
+
+}
+html
+{
+    /* 超出盒子的左右边缘内容进行隐藏 */
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container
+{
+    height: 100vh;
+    width: 100vw;
+
+}
+/* 要镶嵌进去要满足子绝父相 */
+
+.topbar
+{
+
+    height: 70px;
+    width: 100vw;
+    padding: 0;
+
+}
+.topbar-item div a
+{
+    font-size: 25px;
+    margin:0 3px;
+
+}
+#page
+{
+    margin-right:20px ;
+}
+.topbar div
+{
+
+    font-size: 30px;
+}
+.topbar .mark i
+{
+    padding-left:10px ;
+    color:white;
+    font-size: 40px;
+
+}
+.topbar-item
+{
+    display:flex;
+    position: fixed;
+    width: 100vw;
+    line-height: 66px;
+    background-color: #3DC07D;
+}
+.person
+{
+    display:flex;
+    margin-left: 150px;
+
+}
+.person .image
+{
+    height: 50px;
+    width: 50px;
+    margin-top:10px ;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.person .image img
+{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* 保持图片的等比例缩小 */
+    cursor: pointer;
+
+}
+.person .information
+{
+    height:30px;
+    width: 80px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 25px;
+    color: #fff;
+    font-family: 'STHupo';
+    margin-left: 5px;
+    cursor: pointer;
+}
+.person .information:hover
+{
+    color:#333;
+}
+.topbar div span
+{
+    padding-right:100px;
+    font-family: 'YouYuan';
+    color: #fff;
+
+}
+.topbar-item .topbar-right-search
+{
+
+
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+}
+
+.topbar-right-search input
+{
+
+    padding: 7px 7px;
+    outline: none;
+    height: 20px;
+    width: 200px;
+    border-radius: 30px;
+    background-color:whitesmoke;
+    margin:auto 0;
+
+}
+.topbar-right-search i
+{
+    position: absolute;
+    right: 7px;
+
+
+
+}
+.main
+{
+    /* 让div元素在默认情况下按水平方向排列 */
+    display: flex;
+
+}
+
+a
+{
+    /* 清空链接的默认样式 */
+    text-decoration: none;
+    color: #333;
+}
+i
+{
+    /* 取消i标签默认倾斜的样式 */
+    font-style: normal;
+}
+ul li
+{
+    /* 清空列表标签的默认样式 */
+    list-style: none;
+}

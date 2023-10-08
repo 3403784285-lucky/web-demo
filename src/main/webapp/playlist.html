@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>歌单界面</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/playlist.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_yupj8m4h5yl.css">
-
 </head>
 <body>
 
@@ -206,18 +208,6 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
-    axios.post("http://localhost:8080/web-demo/musicServlet").then(function (response) {
-        var data=response.data;
-        var img=document.getElementById('avatar');
-        var name=document.getElementsByClassName('information')[0];
-        var array=data.split(" ");
-        img.src=array[0];
-        name.innerHTML=array[1];
-
-    }).catch(function(error) {
-        // 请求失败，提示错误信息
-        console.error(error);
-    });
 </script>
 <script type="text/javascript" src="js/music.js"></script>
 </body>

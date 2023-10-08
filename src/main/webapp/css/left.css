@@ -1,0 +1,42 @@
+/* 左侧导航栏 */
+.main-left
+{
+    width: 220px;
+    height: 630px;
+
+}
+
+.item-left
+{
+    position: fixed;
+    background-color: #f0f0f0;
+    width: 220px;
+    height: 630px
+}
+.music-title
+{
+    padding: 8px 0px;
+    color: #a59c9c;
+    font-size: 13px;
+
+}
+.main-left-subnav li
+{
+
+    line-height: 40px;
+    width: 220px;
+
+}
+.main-left-subnav li a
+{
+    display: block;
+}
+.main-left-subnav li i
+{
+    padding-right: 5px;
+}
+.main-left a:hover
+{
+    background-color: #43929e;
+    color: #fff;
+}

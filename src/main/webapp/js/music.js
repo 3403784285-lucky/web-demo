@@ -12,19 +12,41 @@ var volumeBar=document.getElementById('volumeBar');
 var loudness=document.getElementsByClassName('loudness')[0];
 var music=document.getElementsByClassName('music-list')[0];
 var musicBroadcast= document.getElementsByClassName('music-broadcast')[0];
+
 var rate=0;
 var mark=0;
 var num=0;
 var rateCopy;
 var height;
 var musics;
-musicBroadcast.style.display='none';
+// musicBroadcast.style.display='none';
 window.onload=function () {
     axios.post("http://localhost:8080/web-demo/musicCopy/readMusicPlay").then(function (response) {
         musics = response.data;
         for (let i = 0; i < musics.length; i++) {
             if (musics[i]["playRange"] != null) {
                 num = musics[i]["id"] - 1;
+                var li=document.createElement('li');
+                li.setAttribute("style", "width: 100%;height: 30px;line-height: 30px;");
+
+                var span1 = document.createElement("span");
+                span1.setAttribute("style", "margin-right: 140px;");
+                span1.innerHTML = musics[i]["name"];
+
+                var span2 = document.createElement("span");
+                span2.setAttribute("style", "margin-right: 80px;color: #7c8892;");
+                span2.innerHTML = "陈雪凝";
+
+                var span3 = document.createElement("span");
+                span3.setAttribute("style", "color: #d0d5ca; font-size: 13px;");
+                span3.innerHTML = "3:12";
+
+                li.appendChild(span1);
+                li.appendChild(span2);
+                li.appendChild(span3);
+                document.getElementById("musicListLi").appendChild(li);
+
+
             }
         }
         if(musics.length==0)
@@ -43,16 +65,12 @@ window.onload=function () {
             updateProgress();
         });
 
-
-
-
     }).catch(function (error) {
         // 请求失败，提示错误信息
         console.error(error);
     });
 }
     dragProcessDotEvent();
-
 
 //网页加载完毕后会立刻执行的一个操作
 //有两个模式，列表循环和单曲循环，默认是列表循环
@@ -97,7 +115,6 @@ window.onload=function () {
         document.getElementById('audioCurTime').innerText = transTime(audio.currentTime);
         document.getElementById('totalTime').innerHTML = transTime(audio.duration);
 
-
     }
 
     audio.addEventListener('ended', function () {
@@ -108,7 +125,6 @@ window.onload=function () {
         audio.src = musics[num]["musicSrc"];
         musicname.innerHTML = musics[num]["name"];
         audio.play();
-
 
     });
 
@@ -254,7 +270,7 @@ window.onload=function () {
         rate = event.offsetY / volumeHeight;
         audio.volume = 1 - rate;
         volumeBar.style.height = rate * 100 + '%';
-        document.getElementsByClassName('china')[0].innerHTML = 1 - rate + '';
+
 
         if (rate == 1) {
             loudness.classList.remove("icon-yinliang");
