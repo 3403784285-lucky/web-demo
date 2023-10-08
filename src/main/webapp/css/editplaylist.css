@@ -1,0 +1,447 @@
+/* 去掉内边距和外边距 */
+/*和load一摸一样*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    /* 设置最小宽度    */
+    height: 100%;
+    color:#333;
+    font-size: 15px;
+
+}
+html
+{
+    /* 超出盒子的左右边缘内容进行隐藏 */
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.container
+{
+    height: 100vh;
+    width: 100vw;
+
+}
+/* 要镶嵌进去要满足子绝父相 */
+
+.topbar
+{
+
+    height: 70px;
+    width: 100vw;
+    padding: 0;
+
+}
+.topbar-item div a
+{
+    font-size: 25px;
+    margin:0 3px;
+
+}
+#page
+{
+    margin-right:20px ;
+}
+.topbar div
+{
+
+    font-size: 30px;
+}
+.topbar .mark i
+{
+    padding-left:10px ;
+    color:white;
+    font-size: 40px;
+
+}
+.topbar-item
+{
+    display:flex;
+    position: fixed;
+    width: 100vw;
+    line-height: 66px;
+    background-color: #3DC07D;
+}
+.person
+{
+    display:flex;
+    margin-left: 150px;
+
+}
+.person .image
+{
+    height: 50px;
+    width: 50px;
+    margin-top:10px ;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.person .image img
+{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* 保持图片的等比例缩小 */
+    cursor: pointer;
+
+}
+.person .information
+{
+    height:30px;
+    width: 80px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 25px;
+    color: #fff;
+    font-family: 'STHupo';
+    margin-left: 5px;
+    cursor: pointer;
+}
+.person .information:hover
+{
+    color:#333;
+}
+.topbar div span
+{
+    padding-right:100px;
+    font-family: 'YouYuan';
+    color: #fff;
+
+}
+.topbar-item .topbar-right-search
+{
+
+
+    height: 70px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+}
+
+.topbar-right-search input
+{
+
+    padding: 7px 7px;
+    outline: none;
+    height: 20px;
+    width: 200px;
+    border-radius: 30px;
+    background-color:whitesmoke;
+    margin:auto 0;
+
+}
+.topbar-right-search i
+{
+    position: absolute;
+    right: 7px;
+
+
+
+}
+.main
+{
+    /* 让div元素在默认情况下按水平方向排列 */
+    display: flex;
+
+}
+
+a
+{
+    /* 清空链接的默认样式 */
+    text-decoration: none;
+    color: #333;
+
+}
+i
+{
+    /* 取消i标签默认倾斜的样式 */
+    font-style: normal;
+}
+ul li
+{
+    /* 清空列表标签的默认样式 */
+    list-style: none;
+}
+/* 左侧导航栏 */
+.main-left
+{
+    width: 220px;
+    height: 630px;
+
+}
+.main-right
+{
+    /* 如果有剩余空间，他将占据剩余空间 */
+    flex: 1;
+    padding: 10px;
+    height: 610px;
+    overflow: auto;
+    display: flex;
+
+
+    /* 被设置固定定位的元素是不占位置的 */
+
+}
+.item-left
+{
+    position: fixed;
+    background-color: #f0f0f0;
+    width: 220px;
+    height: 630px
+}
+.music-title
+{
+    padding: 8px 0px;
+    color: #a59c9c;
+    font-size: 13px;
+}
+.main-left-subnav li
+{
+    line-height: 40px;
+    width: 220px;
+}
+.main-left-subnav li a
+{
+    display: block;
+}
+
+.main-left-subnav li i
+{
+    padding-right: 5px;
+
+
+}
+.main-left a:hover
+{
+    background-color: #43929e;
+    color: #fff;
+}
+
+
+footer
+{
+    /* 底部栏 */
+    height: 80px;
+    width: 100vw;
+    padding: 0;
+}
+.footer_list
+{
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background-color: #fff;
+}
+.footer-btn
+{
+    height: 80px;
+    display: flex;
+
+
+
+}
+.footer-btn a
+{
+    font-size: 39px;
+    margin: 10px 20px;
+
+
+}
+.footer-btn a:hover
+{
+    color:#43929e;
+
+}
+.footer-btn .like
+{
+    margin-left:0 ;
+    margin-right: 300px;
+    font-size: 19px;
+    margin-top:10px; ;
+
+}
+.footer-btn .music-list
+{
+
+    font-size: 23px;
+    margin-top:15px;
+
+}
+.footer-btn .loudness
+{
+
+    font-size: 24px;
+
+}
+.footer-btn .model
+{
+    margin-top: 20px;
+    font-size: 17px;
+}
+.footer-btn .china
+{
+    list-style: none;
+    width: 90px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.footer-btn a div
+{
+    background: url(../img/music7.png);
+    height: 60px;
+    width: 60px;
+    font-size: 17px;
+}
+.play-part
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.audio-bottom
+{
+    height: 10px;
+    display: flex;
+    margin-left: 210px;
+
+}
+/* 进度条和原点 */
+.process-bar-bg
+{
+    position: relative;
+    background-color: rgba(122, 183, 196, 0.247);
+    height: 2px;
+    width: 40vw;
+    cursor: pointer;
+
+}
+.music-frame
+{
+    width: 400px;
+    position: relative;
+    height: 40px;
+}
+
+.music-broadcast
+{
+    position: absolute;
+    height: 630px;
+    width: 400px;
+    top: -630px;
+    display: none;
+    background: rgb(206, 195, 195);
+    overflow-y:scroll;
+
+}
+.music-broadcast div
+{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.music-frame .music-list
+{
+    position: absolute;
+    top: 5px;
+    left: 340px;
+}
+
+.process-bar
+{
+
+    background-color: #43929efc;
+    width: 0;
+    height: 2px;
+
+}
+.audio-length-current, .audio-length-total
+{
+    line-height: 3px;
+    color: #aba0a0;
+    font-size: 7px;
+}
+.process-bar-bg span
+{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color:rgba(32, 173, 124, 0.723);
+    position: absolute;
+    left: 0;
+    top: -4px;
+    cursor: pointer;
+
+}
+#controlVolume:hover  #volumeBarBgBorder
+{
+    display: flex;
+}
+#volumeBarBgBorder:hover
+{
+    display: flex;
+}
+#volumeBarBgBorder
+{
+
+    position: absolute;
+    background: white;
+    height: 90px;
+    padding: 3px;
+    width: 15px;
+    box-shadow: black 1px 1px 1px 1px;
+    display: none;
+    top:-90px;
+    justify-content: center;
+    align-items: center;
+}
+#controlVolume  .loudness
+{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+
+}
+#controlVolume
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    height: 30px;
+    width:30px;
+    margin-right: 150px;
+
+
+
+}
+
+#volumeBar
+{
+    background: #dff1ff;
+    height: 0px;
+    width: 3px;
+}
+#volumeBarBg
+{
+    position: relative;
+    height: 80px;
+    width: 3px;
+    background: #3DC07D;
+    cursor: pointer;
+}
+
+
+

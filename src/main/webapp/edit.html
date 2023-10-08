@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./css/edit.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="container-head">
+        <div class="topbar">
+            <div class="topbar-item">
+                <div class="mark">
+                    <i class="iconfont icon-icon-spring-pink"></i>
+                    <span>海棠花开</span>
+                </div>
+                <div>
+                    <a href="javascript:window.history.back()" class="iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
+                    <a href="javascript:window.history.forward()" class="iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+                </div>
+
+                <div class="topbar-right-search">
+                    <input type="text" placeholder="搜索">
+                    <i class="iconfont icon-sousuo">
+                    </i>
+                </div>
+                <div class="person">
+                    <div class="image"><img class="avatarCopy" src="./img/music10.jpg"/></div>
+                    <a class="information" href="#">微凉花开</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-left">
+                <div class="item-left">
+                    <!-- 列表标签 -->
+                    <ul>
+                        <li>
+                            <div class="music-title">发现音乐</div>
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="#" >
+                                        <i class="iconfont icon-remen"></i>
+                                        <span>热门推荐</span>
+                                    </a>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-yinleliebiao"></i>
+                                        <span>新歌排行榜</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="music-title">我的音乐</div>
+
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="#" >
+                                        <i class="iconfont icon-xihuan"></i>
+                                        <span>我喜欢的音乐</span>
+                                    </a>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-xiazai"></i>
+                                        <span>本地与下载</span>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-ego-favorite"></i>
+                                        <span>我的收藏</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="title">编辑个人信息</div>
+                <div class="modify">
+                    <div class="modify-field">
+                        <div class="nickname part">
+                            <div class="part-header">昵称：</div>
+                            <input class="name-content" type="text">
+                        </div>
+                        <div class="introduction part">
+                            <div class="part-header">介绍：</div>
+                            <textarea class="introduction-content" rows="4" cols="20"></textarea>
+                        </div>
+                        <div class="gender part">
+                            <div class="part-header">性别：</div>
+                            <input type="radio" class="man" name="gender">男
+                            <input type="radio" class="woman" name="gender">女
+                        </div>
+                        <div class="birthday part">
+                            <div class="part-header">生日：</div>
+                            <input type="date" class="birthday-content">
+
+                        </div>
+                        <div class="button part">
+                            <div class="submit-button">&nbsp&nbsp&nbsp&nbsp保存</div>
+                            <div class="cancel-button">&nbsp&nbsp&nbsp&nbsp取消</div>
+                        </div>
+
+
+                    </div>
+                    <div class="modify-image" >
+                        <img class="avatar" src="img/music3.jpg">
+                        <div class="modify-button">&nbsp&nbsp&nbsp&nbsp修改头像</div>
+                        <input  class="choose-image" type="file" name="image" accept="image/*">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer_list">
+            <div class="footer-btn">
+                <a href="#">
+                    <div></div>
+                </a>
+                <ul><li class="china">微凉花开梦清扬</li></ul>
+
+                <div class="play-part">
+                    <a  href="#" class="like iconfont icon-jushoucang"></a>
+                    <a href="#" class="model iconfont icon-yinleliebiao"></a>
+                    <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
+                    <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+                    <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
+                    <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+                    <div id="controlVolume">
+                        <div id="volumeBarBgBorder">
+                            <div id="volumeBarBg">
+                                <div id="volumeBar"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="loudness iconfont icon-yinliang"></a>
+                    </div>
+                    <div class="music-frame">
+
+                        <ul class="music-broadcast">
+                            <div>
+                                当前播放
+                            </div>
+                            <li>
+
+                            </li>
+                        </ul>
+                        <a href="#" class="music-list iconfont icon-ks3_music"></a>
+                    </div>
+                    <audio preload="metadata">
+                        <source  type="audio/mp3">
+                    </audio>
+                    <div class="audio-bottom">
+                        <span class="audio-length-current" id="audioCurTime">00:00</span>
+                        <div class="process-bar-bg" id="processBarBg">
+                            <span id="processDot"></span>
+                            <div class="process-bar" id="processBar"></div>
+                        </div>
+                        <span class="audio-length-total" id="totalTime">00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="./js/music.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    axios.post("http://localhost:8080/web-demo/editServlet").then(function (response) {
+        var data=response.data;
+        var image=document.getElementsByClassName('avatarCopy')[0];
+        var img=document.getElementsByClassName('avatar')[0];
+        var name=document.getElementsByClassName('name-content')[0];
+        var nameCopy=document.getElementsByClassName('information')[0];
+        var array=data.split(" ");
+        var woman=document.getElementsByClassName('woman')[0];
+        var man=document.getElementsByClassName('man')[0];
+        var birthday=document.getElementsByClassName('birthday-content')[0];
+        var signature=document.getElementsByClassName('introduction-content')[0];
+        image.src=array[3];
+        img.src=array[3];
+        name.value=array[2];
+        nameCopy.innerHTML=array[2];
+        birthday.value=array[4];
+        if (array[0]=='2')
+        {
+            man.checked=true;
+        }
+        else
+        {
+            woman.checked=true;
+
+        }
+        signature.innerHTML=array[1];
+
+
+    }).catch(function(error) {
+        // 请求失败，提示错误信息
+        console.error(error);
+    });
+    var cancel=document.getElementsByClassName('cancel-button')[0];
+    var formElements=document.querySelectorAll('textarea,input,radio');
+    var buttonSubmit=document.getElementsByClassName('submit-button')[0];
+    buttonSubmit.disabled=true;
+    formElements.forEach((element)=>
+    {
+        element.addEventListener('change',(event)=>
+        {
+            buttonSubmit.disabled=false;
+        });
+    });
+    // 要获取input里面的值用value好一点
+    cancel.addEventListener('click',()=>
+    {
+        window.location.href = '/web-demo/person.html';
+    })
+    buttonSubmit.addEventListener('click',()=>
+    {
+        var img=document.getElementsByClassName('avatar')[0].src;
+        var name=document.getElementsByClassName('name-content')[0].value;
+        var woman=document.getElementsByClassName('woman')[0];
+        var signature=document.getElementsByClassName('introduction-content')[0].value;
+        var birthday=document.getElementsByClassName('birthday-content')[0].value;
+        let param = new URLSearchParams();
+        param.append('image', img);
+        param.append('name', name);
+        param.append('mark','1');
+        alert(name);
+        if(woman.checked)
+        {
+            param.append('gender','1');
+        }
+        else
+        {
+            param.append('gender','2');
+        }
+        param.append('signature',signature);
+        param.append('birthday',birthday);
+         axios.post("http://localhost:8080/web-demo/personServlet",param).then(function (response) {
+              window.location.href = '/web-demo/person.html';
+         });
+
+
+    });
+    var chooseImage=document.getElementsByClassName('choose-image')[0];
+    var modifyButton=document.getElementsByClassName('modify-button')[0];
+    modifyButton.addEventListener('click',function()
+    {
+        chooseImage.click();
+    })
+    chooseImage.addEventListener('change',function ()
+    {
+        alert("哈哈哈");
+        const file = chooseImage.files[0];
+        //这就是文件路径
+        const filePath = URL.createObjectURL(file);
+        var avatar=document.getElementsByClassName('avatar')[0];
+        avatar.src=filePath;
+    })
+</script>
+</body>
+</html>

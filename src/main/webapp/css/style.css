@@ -1,0 +1,237 @@
+/*重置元素的默认样式，以遍在编写自己的css样式是不受浏览器的影响*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+section
+{
+    /*将位置设置为相对定位，让元素居中*/
+    position: relative;
+    /*将超出的部分隐藏*/
+    overflow: hidden;
+    /*设置为弹性盒子布局，可以灵活排列*/
+    display: flex;
+    /*将子元素在水平方向上居中对齐*/
+    justify-content:center;
+    /*将子元素在垂直方向上居中对齐*/
+    align-items: center;
+    /*让元素占满整个界面，防止内容被截断或出现布局问题*/
+    min-height: 100vh;
+    /*创建一个表示两种或多种颜色线性渐变的背景色*/
+    background: linear-gradient( to bottom,#f1f4f9,#dff1ff);
+
+}
+/*对所有section标签里面的class为color的元素进行设置*/
+section .color
+{
+    /*使用绝对定位可以让页面滚动的时候相对位置不变*/
+    position: absolute;
+    /*用过滤器实现高斯模糊，过滤半径是200像素*/
+    filter: blur(200px);
+
+}
+/*匹配父元素中的第n个子元素*/
+section .color:nth-child(1)
+{
+    /*将第一个子元素向下移动350像素*/
+   top:-350px;
+    /*将宽度和高度设置为600px*/
+    width:600px;
+    height: 600px;
+    background: #ff359b;
+}
+section .color:nth-child(2)
+{
+    /*将第2个子元素向上移动150像素*/
+    bottom: -150px;
+    /*向左移动100px*/
+    left: 100px;
+    width: 500px;
+    /*将宽度和高度设置为500px*/
+    height: 500px;
+    background: #fffd87;
+
+
+}
+section .color:nth-child(3)
+{
+    /*将第3个子元素向下移动50像素*/
+    bottom: 50px;
+    /*向右移动100像素*/
+    right: 100px;
+    /*将宽度和高度设置为500px*/
+    width:500px;
+    height: 500px;
+    background: #00d2ff;
+
+
+}
+.box
+{
+    position:relative;
+}
+/*背景圆的样式*/
+.box .circle
+{
+    position: absolute;
+    /*设置不透明度，也就是10%的不透明度*/
+    background: rgba(255,255,255,0.1);
+    /*将背景圆后面增加模糊效果*/
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    /*背景圆实心的边框*/
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.2) ;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    /*半圆形的圆角边框*/
+    border-radius: 50%;
+    /*将其颜色进行设置，进行色相旋转，用这个hue-rotate函数，calc动态计算长度,70度，用filter来改变属性*/
+    filter:hue-rotate(calc(var(--x)*70deg));
+    /*调用动画animate，需要十秒完成动画，linear表示动画速度是线性也就是相同的，infinite动画无限循环次播放*/
+    animation: animate 10s linear infinite;
+    /*动态计算动画延迟几秒播放*/
+    animation-delay:calc(var(--x)*-1s) ;
+
+}
+/*定义动画早开始和结束的时候垂直向下平移,在一半的时候垂直向上平移*/
+@keyframes animate {
+    0%,100%,50%
+    {
+        transform: translateY(-50px);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }
+}
+.box .circle:nth-child(1)
+{
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .circle:nth-child(2)
+{
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    /*设置元素的堆叠顺序为2，使其在其他具有相同堆叠顺序的元素之上显示：*/
+    z-index: 2;
+}
+.box .circle:nth-child(3)
+ {
+     bottom: 50px;
+     right: -60px;
+     width: 80px;
+     height: 80px;
+    z-index: 2;
+ }
+.box .circle:nth-child(4)
+{
+    bottom: -80px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+}
+.box .circle:nth-child(5)
+{
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+/*登录框样式*/
+.container
+{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.form
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+.form h2
+{
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    /*字体粗细*/
+    font-weight: 600;
+    /*字母之间的间距*/
+    letter-spacing: 5px;
+    margin-bottom:15px ;
+    /*鼠标指针设置为手型*/
+    cursor: pointer;
+}
+
+/* 输入框样式 ----------------------*/
+
+.form .inputBox
+{
+    width: 100%;
+    margin-top: 20px;
+
+}
+.form .inputBox input
+{
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    outline: none;
+    border: none;
+    /*边框拐角处呈现出一个半径为30像素的原形或椭圆形*/
+    border-radius:30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+
+}
+.errorMsg
+{
+    font-size: 13px;
+    color: red;
+}
+.form .inputBox input::placeholder
+{
+    color: #fff;
+}
+.form .inputBox input[name="button"]
+{
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.forget a{
+    margin-top: 6px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+

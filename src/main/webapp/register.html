@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    引入css样式表文件-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register</title>
+</head>
+<body>
+<section>
+    <!--    背景颜色-->
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+        <!--        背景圆-->
+        <!--        设置大小和位置-->
+        <div class="circle" style="--x:1"></div>
+        <div class="circle" style="--x:2"></div>
+        <div class="circle" style="--x:3"></div>
+        <div class="circle" style="--x:4"></div>
+        <!--        登录框-->
+        <div class="container">
+            <div class="form">
+                <h2>注册</h2>
+                <div class="errorMsg"  id="judge"></div>
+                <form>
+                    <div class="inputBox">
+                        <input type="text" id="email" name="email" placeholder="邮箱"></input>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" id="password" name="password" placeholder="密码"></input>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="verification" name="verification" placeholder="验证码"></input>
+                    </div>
+                    <br>
+<!--                    别轻易用submit，不然会死-->
+                    <span class="inputBox">
+                        <input name="button" id="register" type="button" value="注册"></input>
+                    </span>
+                    <span class="inputBox">
+                        <input name="button" id="button" type="button" value="验证码"></input>
+                    </span>
+                    <p class="forget"><a href="login.html">登录</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--修改按钮上面的文字如果没有用的话，可以尝试直接修改value-->
+<script>
+    var timer;
+    //看清失去焦点
+    document.getElementById("email").addEventListener("blur",myFunction2);
+    function myFunction2() {
+        //要把这个放在函数里面，不然可能还没加载完就
+        var email = document.getElementById('email').value;
+        // 不知道为什么，直接写点击事件写不了，要用监听
+        var button = document.getElementById('button');
+        var register=document.getElementById('register');
+        var textID = document.getElementById('judge');
+        let param = new URLSearchParams();
+        param.append('email1', email);
+        axios.post("http://localhost:8080/web-demo/userCopy/register", param).then(function (response) {
+            var data = response.data;
+            if (data == "correct") {
+                textID.innerHTML = '';
+                button.disabled=false;
+                register.disabled=false;
+            }
+            else if(data=="exist")
+            {
+                textID.innerHTML = '账户已存在';
+                button.disabled=true;
+                register.disabled=true;
+            }
+            else
+            {
+                textID.innerHTML = '邮箱格式错误';
+                button.disabled=true;
+                register.disabled=true;
+            }
+        }).catch(function (error) {
+            // 请求失败，提示错误信息
+            console.error(error);
+        })
+    }
+        document.getElementById("button").addEventListener("click", myFunction1);
+        function myFunction1() {
+            //要把这个放在函数里面，不然可能还没加载完就
+            var email = document.getElementById('email').value;
+            // 不知道为什么，直接写点击事件写不了，要用监听
+            var button = document.getElementById('button');
+            var textID = document.getElementById('judge');
+            var register=document.getElementById('register');
+            let param = new URLSearchParams();
+            param.append('email', email);
+            axios.post("http://localhost:8080/web-demo/userCopy/register", param).then(function (response) {
+                var data = response.data;
+                if (data == "success")
+                {
+                    textID.innerHTML = '';
+                    register.disabled=false;
+                    alert("验证码已发送，六十秒后可以重新发送，该验证码有效期为五分钟");
+                    var timeLeft = 60;
+                    timer = setInterval(function () {
+                        timeLeft--; // 倒计时减1秒
+                        if (timeLeft <= 0) { // 如果倒计时结束
+                            clearInterval(timer); // 清除定时器
+                            button.value = '验证码';
+                            button.disabled = false;
+                        } else { // 如果倒计时未结束
+                            button.value = timeLeft + "s"; // 显示剩余时间提示信息
+                            button.disabled = true;
+                        }
+                    }, 1000);
+                } else {
+                    textID.innerHTML = '邮箱格式错误';
+                    button.disabled=true;
+                    register.disabled=true;
+                }
+            }).catch(function (error) {
+                // 请求失败，提示错误信息
+                console.error(error);
+            })
+        }
+    document.getElementById("register").addEventListener("click", myFunction3);
+    function myFunction3() {
+
+        //要把这个放在函数里面，不然可能还没加载完就
+        var email = document.getElementById('email').value;
+        var button=document.getElementById('button');
+        var register=document.getElementById('register');
+        // 不知道为什么，直接写点击事件写不了，要用监听
+        var textID = document.getElementById('judge');
+        var password=document.getElementById('password').value;
+        var verification=document.getElementById('verification').value;
+        let param = new URLSearchParams();
+        param.append('email2', email);
+        param.append('password',password);
+        param.append('verification',verification);
+        axios.post("http://localhost:8080/web-demo/userCopy/register", param).then(function (response) {
+            var data = response.data;
+            if (data == "passwordError")
+            {
+                textID.innerHTML = '密码格式错误（必须包含数字字母和特殊字符，至少一个大写字母，一个小写字母）';
+            }
+            else if(data=="verificationError")
+            {
+              textID.innerHTML='验证码错误';
+            }
+            else if(data=="exist")
+            {
+                textID.innerHTML = '账户已存在';
+                button.disabled=true;
+            }
+            else if(data=="unmatch")
+            {
+                textID.innerHTML = '邮箱和验证码不匹配';
+            }
+            else
+            {
+                //成功的消息
+                textID.innerHTML = '';
+                button.disabled=false;
+                register.disabled=false
+                clearInterval(timer);
+                window.location.href = '/web-demo/music.html';
+            }
+        }).catch(function (error) {
+            // 请求失败，提示错误信息
+            console.error(error);
+        })
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    引入css样式表文件-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+<section>
+<!--    背景颜色-->
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+<!--        背景圆-->
+<!--        设置大小和位置-->
+        <div class="circle" style="--x:1"></div>
+        <div class="circle" style="--x:2"></div>
+        <div class="circle" style="--x:3"></div>
+        <div class="circle" style="--x:4"></div>
+<!--        登录框-->
+        <div class="container">
+            <div class="form">
+                <h2>登录</h2>
+                <div class="errorMsg"  id="judge"></div>
+                <form>
+                    <div class="inputBox">
+                        <input type="text" id="userAccount" name="userAccount" placeholder="账号"></input>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="password" id="password" name="password" placeholder="密码"></input>
+                    </div>
+                    <div class="inputBox">
+                        <input type="button" name="button" id="login" value="登录"></input>
+                    </div>
+<!--                    为什么位置都不一样了-->
+                    <p class="forget"><a href="forget.html">忘记密码？</a></p>
+                    <p class="forget"><a href="register.html">没有帐户？</a></p>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    document.getElementById("login").addEventListener("click",myFunction);
+    function myFunction()
+    {
+
+        var userAccount=document.getElementById('userAccount').value;
+        var password=document.getElementById('password').value;
+        let param = new URLSearchParams()
+        param.append('userAccount', userAccount);
+        param.append('password', password)
+        axios.post("http://localhost:8080/web-demo/userCopy/login",param).then(function (response) {
+            var data=response.data;
+            var textID=document.getElementById("judge");
+            textID.innerHTML='';
+            //这里是字符串
+            if(data.toString() =="false")textID.innerHTML='账号或密码错误';
+            else {textID.innerHTML='';window.location.href = '/web-demo/music.html';}
+
+        }).catch(function(error) {
+            // 请求失败，提示错误信息
+            console.error(error);
+        });
+    }
+
+</script>
+</body>
+</html>

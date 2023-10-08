@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/webtest/utils/GetMyAccount.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/webtest/utils/Md5Code.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/webtest/utils/PreEmail.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/webtest/utils/SnowFlakeId.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/music.js" charset="UTF-8" />
+  </component>
+</project>

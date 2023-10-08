@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歌手认证</title>
+    <link rel="stylesheet" href="css/identify.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="container-head">
+        <div class="topbar">
+            <div class="topbar-item">
+                <div class="mark">
+                    <i class="iconfont icon-icon-spring-pink"></i>
+                    <span>海棠花开</span>
+                </div>
+                <div>
+                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
+                    <a href="javascript:window.history.forward()" id="nextPage" class="next-page iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+                </div>
+
+                <div class="topbar-right-search">
+                    <input type="text" placeholder="搜索">
+                    <i class="iconfont icon-sousuo">
+                    </i>
+                </div>
+                <div class="person">
+                    <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
+                    <a class="information" href="person.html">微凉花开</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-left">
+                <div class="item-left">
+                    <!-- 列表标签 -->
+                    <ul>
+                        <li>
+                            <div class="music-title">发现音乐</div>
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="#" >
+                                        <i class="iconfont icon-remen"></i>
+                                        <span>热门推荐</span>
+                                    </a>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-yinleliebiao"></i>
+                                        <span>新歌排行榜</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="music-title">我的音乐</div>
+
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="#" >
+                                        <i class="iconfont icon-xihuan"></i>
+                                        <span>我喜欢的音乐</span>
+                                    </a>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-xiazai"></i>
+                                        <span>本地与下载</span>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="iconfont icon-ego-favorite"></i>
+                                        <span>我的收藏</span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-right">
+            <div class="identify-main">
+                <div class="identify-part1 identify" style="display: flex">
+                    <span>认证人：</span>
+                    <input type="text" class="name-identify"></input>
+                </div>
+               <div class="identify-part2 identify" style="display: flex">
+                   <span>原创歌曲（请先选择一首）：</span>
+                   <input type="text" class="music-identify" ></input>
+                   <input type="file" style="display: none" accept="audio/*">
+                   <div class="choose-song">&nbsp&nbsp选择文件</div>
+               </div>
+               <div class="identify-part3 identify"style="display: flex">
+                   <div class="identify-button">&nbsp&nbsp认证</div>
+                   <div class="identify-cancel">&nbsp&nbsp取消</div>
+               </div>
+            </div>
+                <img src="./img/cute.gif"/>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer_list">
+            <div class="footer-btn">
+                <a href="#">
+                    <div></div>
+                </a>
+                <ul><li class="china">微凉花开梦清扬</li></ul>
+
+                <div class="play-part">
+                    <a  href="#" class="like iconfont icon-jushoucang"></a>
+                    <a href="#" class="model iconfont icon-yinleliebiao"></a>
+                    <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
+                    <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+                    <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
+                    <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+                    <div id="controlVolume">
+                        <div id="volumeBarBgBorder">
+                            <div id="volumeBarBg">
+                                <div id="volumeBar"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="loudness iconfont icon-yinliang"></a>
+                    </div>
+                    <div class="music-frame">
+
+                        <ul class="music-broadcast">
+                            <div>
+                                当前播放
+                            </div>
+                            <li>
+
+                            </li>
+                        </ul>
+
+                        <a href="#" class="music-list iconfont icon-ks3_music"></a>
+                    </div>
+                    <audio preload="metadata">
+                        <source  type="audio/mp3">
+                    </audio>
+                    <div class="audio-bottom">
+                        <span class="audio-length-current" id="audioCurTime">00:00</span>
+                        <div class="process-bar-bg" id="processBarBg">
+                            <span id="processDot"></span>
+                            <div class="process-bar" id="processBar"></div>
+                        </div>
+                        <span class="audio-length-total" id="totalTime">00:00</span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--如果运行不了顺序很重要-->
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    alert("欢迎回来");
+    axios.post("http://localhost:8080/web-demo/musicServlet").then(function (response) {
+        var data=response.data;
+        var img=document.getElementById('avatar');
+        var name=document.getElementsByClassName('information')[0];
+        var array=data.split(" ");
+        img.src=array[0];
+        name.innerHTML=array[1];
+
+    }).catch(function(error) {
+        // 请求失败，提示错误信息
+        console.error(error);
+    });
+</script>
+<script type="text/javascript" src="js/music.js"></script>
+</body>
+</html>

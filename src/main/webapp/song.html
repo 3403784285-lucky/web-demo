@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音乐播放器</title>
+  <link rel="stylesheet" href="css/song.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="container-head">
+    <div class="topbar">
+      <div class="topbar-item">
+        <div class="mark">
+          <i class="iconfont icon-icon-spring-pink"></i>
+          <span>海棠花开</span>
+        </div>
+        <div>
+          <a href="#" class="iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
+          <a href="#" id="page" class="iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+        </div>
+
+        <div class="topbar-right-search">
+          <input type="text" placeholder="搜索">
+          <i class="iconfont icon-sousuo">
+          </i>
+        </div>
+        <div class="person">
+          <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
+          <a class="information" href="person.html">微凉花开</a>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-left">
+        <div class="item-left">
+          <!-- 列表标签 -->
+          <ul>
+            <li>
+              <div class="music-title">发现音乐</div>
+              <ul class="main-left-subnav">
+                <li>
+                  <a href="#" >
+                    <i class="iconfont icon-remen"></i>
+                    <span>热门推荐</span>
+                  </a>
+
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="iconfont icon-yinleliebiao"></i>
+                    <span>新歌排行榜</span>
+                  </a>
+
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="music-title">我的音乐</div>
+
+              <ul class="main-left-subnav">
+                <li>
+                  <a href="#" >
+                    <i class="iconfont icon-xihuan"></i>
+                    <span>我喜欢的音乐</span>
+                  </a>
+
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="iconfont icon-xiazai"></i>
+                    <span>本地与下载</span>
+                  </a>
+
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="iconfont icon-ego-favorite"></i>
+                    <span>我的收藏</span>
+                  </a>
+
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-right">
+        <div class="song-cartoon">
+          <div class="part-connect">
+            <div class="big-circle">
+              <div class="small-circle">
+
+              </div>
+            </div>
+            <div class="stick">
+              <div class="qi iconfont icon-peach-flower"></div>
+            </div>
+          </div>
+          <div class="active-outer">
+            <div class="active-picture">
+              <img class="active-image" src="./img/music8.jpg"/>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="song">
+          <div class="song-title">嘻嘻哈哈过大年</div>
+          <div class="split-border">
+            <span class="time-dot">3:20</span>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="skip iconfont icon-bofangqi-bofang"></a>
+          </div>
+          <div class="song-outer">
+            <div class="song-roll">
+
+              <br><br><br><br><br><br><br><br><br><br><br>
+              <ul class="song-main"></ul>
+              <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="comment">
+          <div class="comment-title">
+            全部评论
+          </div>
+          <ul>
+            <li class="comment-main">
+              <div class="content-part">
+                <img src="./img/music11.jpg">
+                <div id="netName">酒归啊：</div>
+                <div class="content-reply"></div>
+                <div id="commentContent">谁还不是个宝宝，我也要《彩虹糖》！！！</div>
+              </div>
+              <div class="content-decoration">
+                <div class="comment-time">2020年5月26日 20:50</div>
+                <div class="comment-reply iconfont icon-huifu"></div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+    </div>
+      </div>
+
+  </div>
+  <footer>
+    <div class="footer_list">
+      <div class="footer-btn">
+        <a href="#">
+          <div></div>
+        </a>
+        <ul><li class="china">微凉花开梦清扬</li></ul>
+
+        <div class="play-part">
+          <a  href="#" class="like iconfont icon-jushoucang"></a>
+          <a href="#" class="model iconfont icon-yinleliebiao"></a>
+          <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
+          <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+          <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
+          <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+          <div id="controlVolume">
+            <div id="volumeBarBgBorder">
+              <div id="volumeBarBg">
+                <div id="volumeBar"></div>
+              </div>
+            </div>
+            <a href="#" class="loudness iconfont icon-yinliang"></a>
+          </div>
+          <div class="music-frame">
+
+            <ul class="music-broadcast">
+              <div>
+                当前播放
+              </div>
+              <li>
+
+              </li>
+            </ul>
+
+            <a href="#" class="music-list iconfont icon-ks3_music"></a>
+          </div>
+          <audio preload="metadata">
+            <source  type="audio/mp3">
+          </audio>
+          <div class="audio-bottom">
+            <span class="audio-length-current" id="audioCurTime">00:00</span>
+            <div class="process-bar-bg" id="processBarBg">
+              <span id="processDot"></span>
+              <div class="process-bar" id="processBar"></div>
+            </div>
+            <span class="audio-length-total" id="totalTime">00:00</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!--如果运行不了顺序很重要-->
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="js/music.js"></script>
+<script type="text/javascript" src="js/song.js"></script>
+</body>
+</html>
