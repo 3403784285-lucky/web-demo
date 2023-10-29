@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/music.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_ox2f1wjcyl.css">
 
 </head>
 <body>
@@ -22,8 +22,8 @@
                     <span>海棠花开</span>
                 </div>
                 <div>
-                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
-                    <a href="javascript:window.history.forward()" id="nextPage" class="next-page iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-fanhui"></a>
+
                 </div>
 
                 <div class="topbar-right-search">
@@ -32,8 +32,8 @@
                     </i>
                 </div>
                 <div class="person">
-                    <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
-                    <a class="information" href="person.html">微凉花开</a>
+                    <div class="image"><img id="avatar"/></div>
+                    <a class="information" href="person.html">未登录</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                             <div class="music-title">发现音乐</div>
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="music.html" >
                                         <i class="iconfont icon-remen"></i>
                                         <span>热门推荐</span>
                                     </a>
@@ -54,7 +54,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#">
+                                    <a href="rankList.html">
                                         <i class="iconfont icon-yinleliebiao"></i>
                                         <span>新歌排行榜</span>
                                     </a>
@@ -67,27 +67,56 @@
 
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="like.html" >
                                         <i class="iconfont icon-xihuan"></i>
                                         <span>我喜欢的音乐</span>
                                     </a>
-
                                 </li>
-
                                 <li>
-                                    <a href="#">
+                                    <a href="load.html">
                                         <i class="iconfont icon-xiazai"></i>
                                         <span>本地与下载</span>
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="collect.html">
                                         <i class="iconfont icon-ego-favorite"></i>
                                         <span>我的收藏</span>
                                     </a>
 
                                 </li>
+                                <li>
+                                    <a href="identify.html">
+                                        <i class="iconfont icon-OTCrenzheng"></i>
+                                        <span>歌手认证</span>
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="music-title">我的歌单</div>
+
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="editplaylist.html" >
+                                        <i class="iconfont icon-chuangjiangedan"></i>
+                                        <span>创建歌单</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="person.html">
+                                        <i class="iconfont icon-gedanbiaoqian"></i>
+                                        <span>歌单合集</span>
+                                    </a>
+
+                                </li>
+
+
+
                             </ul>
                         </li>
                     </ul>
@@ -181,27 +210,29 @@
     <footer>
         <div class="footer_list">
             <div class="footer-btn">
-                <a href="#">
-                    <div></div>
-                </a>
-                <ul><li class="china">微凉花开梦清扬</li></ul>
+                <div class="iconfont">
+                    <img  class="music-image"></img>
+                </div>
+                <ul><li class="china">未知</li></ul>
 
                 <div class="play-part">
-                    <a  href="#" class="like iconfont icon-jushoucang"></a>
-                    <a href="#" class="model iconfont icon-yinleliebiao"></a>
-                    <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
-                    <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+                    <div   class="like iconfont icon-jushoucang"></div>
+                    <div  class="model iconfont icon-yinleliebiao"></div>
+                    <div class="prev iconfont icon-shangyishou-yuanshijituantubiao"></div>
+                    <div   id="player" class="pause iconfont icon-zanting"></div>
                     <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
-                    <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+                    <div   class="next iconfont icon-xiayishou-yuanshijituantubiao"></div>
+
                     <div id="controlVolume">
                         <div id="volumeBarBgBorder">
                             <div id="volumeBarBg">
                                 <div id="volumeBar"></div>
                             </div>
                         </div>
-                        <a href="#" class="loudness iconfont icon-yinliang"></a>
-                        <a href="#" class="music-list iconfont icon-ks3_music"></a>
+                        <div  class="loudness iconfont icon-yinliang"></div>
+
                     </div>
+                    <div  class="music-list iconfont icon-ks3_music"></div>
 
                     <audio>
                         <source  type="audio/mp3">
@@ -224,7 +255,7 @@
                                 <div style="font-size: 13px;color: #a6b0ba; margin-right: 250px;" >
                                     总共35首
                                 </div>
-                                <div style="color: #7ba4ac;font-size: 15px;">
+                                <div class="delete-table" style="color: #7ba4ac;font-size: 15px;cursor: pointer;">
                                     清空列表
                                 </div>
                             </div>
@@ -233,17 +264,6 @@
                             </div>
                             <ul id="musicListLi" style="overflow-y: scroll;">
 
-                                <li style="width: 100%;height: 30px;line-height: 30px;background: rgba(219,219,213,0.43)" >
-                                    <span style="margin-right: 140px;">
-                                        白山茶
-                                    </span>
-                                    <span style="margin-right: 80px;color: #7c8892;">
-                                        陈雪凝
-                                    </span>
-                                    <span style="color: #d0d5ca; font-size: 13px;">
-                                        3:12
-                                    </span>
-                                </li>
 
                             </ul>
 
@@ -259,27 +279,557 @@
     </footer>
 </div>
 <!--如果运行不了顺序很重要-->
-
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let param = new URLSearchParams();
+        param.append('refreshToken', localStorage.getItem('refreshToken'));
+        param.append('accessToken', localStorage.getItem('accessToken'));
+        axios.post("http://localhost:8080/web-demo/userCopy/userInfo",param).then(function (response) {
+            var data=response.data;
+            var img=document.getElementById('avatar');
+            var name=document.getElementsByClassName('information')[0];
+            if(data=="fail")
+            {
+                name.innerHTML="未登录";
+            }
+            else
+            {
+                img.src=data["image"];
+                name.innerHTML=data["name"];
+                localStorage.setItem("accessToken",data["accessToken"]);
+                localStorage.setItem("refreshToken",data["refreshToken"]);
+                localStorage.setItem('image',data["image"]);
+                localStorage.setItem('name',data["name"]);
+            }
 
-    axios.post("http://localhost:8080/web-demo/userCopy/userInfo").then(function (response) {
-        var data=response.data;
-        var img=document.getElementById('avatar');
-        var name=document.getElementsByClassName('information')[0];
-        var array=data.split(" ");
-        img.src=array[0];
-        name.innerHTML=array[1];
+            axios.post("http://localhost:8080/web-demo/musicCopy/readMusicPlay").then(function (response) {
+                var musics = response.data;
+                var musicsCopy=JSON.stringify(musics);
+                localStorage.setItem("musics",musicsCopy);
+                console.log("111111111111111111111111111111111111111");
+                //代码的顺序不能乱调，不然会获取不到
+                //不是用户登录也可以听歌，但是列表不可以储存
+                var player=document.getElementById("player");
+                var audio=document.getElementsByTagName('audio')[0];
+                var musicname=document.getElementsByClassName('china')[0];
+                var prev=document.getElementsByClassName('prev')[0];
+                var next=document.getElementsByClassName('next')[0];
+                var model=document.getElementsByClassName('model')[0];
+                var processBarBg=document.getElementById('processBarBg');
+                var volumeBarBg=document.getElementById('volumeBarBg');
+                var dot=document.getElementById('processDot');
+                var volumeBar=document.getElementById('volumeBar');
+                var loudness=document.getElementsByClassName('loudness')[0];
+                var music=document.getElementsByClassName('music-list')[0];
+                var musicFrame= document.getElementsByClassName('music-frame')[0];
+                var musicListLi=document.getElementById('musicListLi');
+                var musicImage=document.getElementsByClassName('music-image')[0];
+                // var deleteTable=document.getElementsByClassName('delete-table')[0];
+                var likeTag=document.getElementsByClassName('like')[0];
+                var rate=0;
+                var mark=0;
+                var num=0;
+                var init=0;
+                var numCopy=-1;
+                var markNumOr=1;
+                var rateCopy;
+                var height;
+                //不能删除单条音乐，在临时列表里面
+                alert("欢迎回来");
+                console.log("2222222222222");
+                musicFrame.style.display='none';
 
-    }).catch(function(error) {
-        // 请求失败，提示错误信息
-        console.error(error);
+                if (document.getElementsByClassName('active-image')[0]!=null)
+                {
+                    document.getElementsByClassName('active-image')[0].style.animationPlayState='paused';
+                    document.getElementsByClassName('stick')[0].classList.add('rotateCircle');
+                }
+
+                console.log("2");
+
+                if(musics=="errorInfo")
+                {
+
+                }
+                else
+                {
+                    if(musics[num]["likePersonId"]!=null||musics[num]["likePersonId"]!='')
+                    {
+                        likeTag.classList.remove('icon-jushoucang');
+                        likeTag.classList.add('icon-svg_nav_Like_press');
+                    }
+                    console.log(musics);
+                    for (let i = 0; i < musics.length; i++) {
+                        if (musics[i]["playRange"] != null) {
+                            num = i;
+                        }
+                        var li=document.createElement('li');
+                        if(markNumOr%2==0)
+                        {
+                            li.setAttribute("style", "width: 100%;height: 30px;line-height: 30px;background: rgba(224,224,220,0.27);display: flex;");
+                        }
+                        else
+                        {
+                            li.setAttribute("style", "width: 100%;height: 30px;line-height: 30px;background: white;display: flex;");
+                        }
+                        markNumOr++;
+                        var span1 = document.createElement("span");
+                        span1.setAttribute("style", " width: 110px;margin-right: 60px;");
+                        span1.innerHTML = musics[i]["name"];
+
+                        var span2 = document.createElement("span");
+                        span2.setAttribute("style", "color: #7c8892; width: 80px;margin-right:40px;");
+                        span2.innerHTML = "陈雪凝";
+
+                        var span3 = document.createElement("span");
+                        span3.setAttribute("style", "color: #d0d5ca; font-size: 13px;width: 60px;");
+                        span3.innerHTML=musics[i]["totalTime"];
+                        li.appendChild(span1);
+                        li.appendChild(span2);
+                        li.appendChild(span3);
+                        musicListLi.appendChild(li);
+                    }
+
+                    var observer=new MutationObserver(function (mutations)
+                    {
+                        if(musicListLi.children.length==0)
+                        {
+                            console.log("禁用加消失");
+
+                            if(!audio.paused)
+                                audio.pause();
+                            disableLinks();
+                        }
+                        else
+                        {
+                            console.log("重新启用");
+                            releaseLinks();
+
+
+
+                        }
+                    });
+                    var config={childList:true,subtree:true};
+                    observer.observe(musicListLi,config);
+                    function disableLinks() {
+                        var footerBtn = document.getElementsByClassName("footer-btn")[0];
+                        var links = footerBtn.getElementsByClassName('iconfont');
+                        for (let i = 0; i < links.length-1; i++) {
+                            console.log("wawa"+i);
+                            links[i].style.visibility='hidden';
+                        }
+                    }
+                    function  releaseLinks()
+                    {
+                        var footer = document.getElementsByTagName("footer")[0];
+                        var links = footer.getElementsByClassName('iconfont');
+                        for (let i = 0; i < links.length-1; i++) {
+                            console.log("haha"+i);
+                            links[i].style.visibility='visible';
+                        }
+                    }
+
+
+                }
+
+
+                var items=musicListLi.getElementsByTagName('li');
+                for(let i=0;i<items.length;i++)
+                {
+                    items[i].addEventListener('click',function ()
+                    {
+                        audio.src = musics[i]["musicSrc"];
+                        musicname.innerHTML = musics[i]["name"];
+                        musicImage.src=musics[num]["image"];
+                        if(audio.paused)
+                        {
+                            player.classList.remove("icon-zanting");
+                            player.classList.add("icon-suspend");
+                            audio.play();
+                        }
+                        else
+                        {
+                            audio.play();
+                        }
+                    })
+                }
+                for(let i=0;i<items.length;i++)
+                {
+                    items[i].addEventListener('mouseover',function ()
+                    {
+                        console.log("第"+i+"个元素悬浮");
+                        items[i].style.background='rgba(139,126,126,0.56)';
+                    });
+                    items[i].addEventListener('mouseout',function ()
+                    {
+                        console.log("第"+i+"个元素移开");
+                        if(i%2==0)
+                        {
+
+                            items[i].style.background='rgba(224,224,220,0.27)';
+                        }
+                        else
+                        {
+                            items[i].style.background='white';
+                        }
+                    });
+                }
+
+                musicname.innerHTML = musics[num]["name"];
+                audio.src = musics[num]["musicSrc"];
+                musicImage.src=musics[num]["image"];
+                audio.load();
+                audio.addEventListener('loadedmetadata',function ()
+                {
+                    //之前一直没用弄明白我靠原来是没有加载完就将它获取了以至于得到的是NaN
+                    if(init==0)
+                    {
+                        audio.currentTime = musics[num]["playRange"];
+                        init++;
+                    }
+
+                    updateProgress();
+                });
+                audio.addEventListener('timeupdate',function ()
+                {
+                    if(numCopy!=num&&numCopy!=-1)
+                    {
+                        if (numCopy%2==0)
+                        {
+                            items[numCopy].style.background='rgba(224,224,220,0.27)';
+                        }
+                        else
+                        {
+                            items[numCopy].style.background='white';
+                        }
+                    }
+                    numCopy=num;
+                    updateProgress();
+                    items[num].style.background='##6CC7F6';
+                });
+
+
+
+                dragProcessDotEvent();
+
+                //网页加载完毕后会立刻执行的一个操作
+                //有两个模式，列表循环和单曲循环，默认是列表循环
+                // 还没有考虑是否是空的情况
+                //音乐有多首，添加音乐数组
+                //拖动进度条也可以调节进度
+                // 获取音频对象
+                // 获取第一个音频对象
+                // 点击播放暂停图片时，控制音乐的播放与暂停
+
+                player.addEventListener('click', myFunction1);
+
+                function myFunction1() {
+
+                    // 两天的变化，一个空格是无法清楚的，每个空格隔开就相当于一个类名；
+
+                    if (audio.paused) {
+                        audio.play();
+                        console.log("播放");
+                        player.classList.remove("icon-zanting");
+                        player.classList.add("icon-suspend");
+                        if ( document.getElementsByClassName("stick")[0]!=null)
+                        {
+                            document.getElementsByClassName("stick")[0].classList.remove("rotateCircle");
+                            document.getElementsByClassName('active-image')[0].style.animationPlayState='running';
+                        }
+
+
+
+
+
+                    } else {
+                        audio.pause();
+                        console.log("暂停");
+                        player.classList.remove("icon-suspend");
+                        player.classList.add("icon-zanting");
+                        if ( document.getElementsByClassName("stick")[0]!=null)
+                        {
+                            document.getElementsByClassName("stick")[0].classList.add("rotateCircle");
+                            document.getElementsByClassName('active-image')[0].style.animationPlayState='paused';
+
+                        }
+
+
+
+                    }
+                }
+
+                //定义方法参数可以不指定类型
+                function updateProgress() {
+                    // 更新进度条
+                    var value = audio.currentTime / audio.duration;
+
+                    document.getElementById('processBar').style.width = value * 100 + '%';
+                    document.getElementById('processDot').style.left = value * 100 + '%';
+                    document.getElementById('audioCurTime').innerText = transTime(audio.currentTime);
+                    document.getElementById('totalTime').innerHTML = transTime(audio.duration);
+                }
+
+                audio.addEventListener('ended', function () {
+
+                    //如果设置了单曲循环该监听器则会消失
+                    num++;
+                    if (num == musics.length) num = 0;
+                    audio.src = musics[num]["musicSrc"];
+                    musicname.innerHTML = musics[num]["name"];
+                    audio.play();
+
+                });
+
+                model.addEventListener('click', function () {
+                    if (mark == 0) {
+                        audio.loop = true;
+                        mark = 1;
+                        model.classList.remove("icon-yinleliebiao");
+                        model.classList.add("icon-xunhuanbofang");
+
+                    } else {
+                        mark = 0;
+                        audio.loop = false;
+                        model.classList.remove("icon-xunhuanbofang");
+                        model.classList.add("icon-yinleliebiao");
+
+                    }
+                });
+
+                prev.addEventListener('click', function () {
+                    num--;
+                    if (num < 0) num = musics.length - 1;
+                    audio.src = musics[num]["musicSrc"];
+                    musicname.innerHTML = musics[num]["name"];
+                    musicImage.src=musics[num]["image"];
+                    player.classList.remove("icon-zanting");
+                    player.classList.add("icon-suspend");
+                    audio.play();
+                });
+
+                next.addEventListener('click', function () {
+                    num++;
+                    if (num ==musics.length) num = 0;
+                    audio.src = musics[num]["musicSrc"];
+                    musicname.innerHTML = musics[num]["name"];
+                    musicImage.src=musics[num]["image"];
+                    player.classList.remove("icon-zanting");
+                    player.classList.add("icon-suspend");
+                    audio.play();
+
+                });
+
+                function transTime(value) {
+                    var time = "";
+                    var h = parseInt(value / 3600);
+                    value %= 3600;
+                    var m = parseInt(value / 60);
+                    var s = parseInt(value % 60);
+                    if (h > 0) {
+                        time = formatTime(h + ":" + m + ":" + s);
+                    } else {
+                        time = formatTime(m + ":" + s);
+                    }
+                    return time;
+                }
+
+                function formatTime(value) {
+                    var time = "";
+                    var s = value.split(":");
+                    var i = 0;
+                    for (; i < s.length - 1; i++) {
+                        time += s[i].length == 1 ? ("0" + s[i]) : s[i];
+                        time += ":";
+                    }
+                    time += s[i].length == 1 ? ("0" + s[i]) : s[i];
+                    return time;
+                }
+
+                processBarBg.addEventListener('mousedown', function (event) {
+                    //音乐开始播放之后和播放过并且暂停了也可以
+                    if (!audio.paused || audio.currentTime != 0) {
+                        var pgsWidth = parseFloat(window.getComputedStyle(processBarBg, null).width.replace('px', ''));
+                        var rate = event.offsetX / pgsWidth;
+                        audio.currentTime = audio.duration * rate;
+                        updateProgress();
+                    }
+                });
+
+                function dragProcessDotEvent() {
+
+                    var position = {
+                        oriOffestLeft: 0,
+                        oriX: 0,
+                        maxLeft: 0,
+                        maxRight: 0
+                    };
+                    //监听器出了一次性函数也可以传函数名进去，不传参数也可以执行
+                    //标记是否拖动开始
+                    var flag = false;
+                    dot.addEventListener('mousedown', down, false);
+                    document.addEventListener('mousemove', move, false);
+                    document.addEventListener('mouseup', end, false);
+
+                    function down(event) {
+                        if (!audio.paused || audio.currentTime != 0) {
+                            //只有在这种情况下才表示拖动开始
+                            flag = true;
+                            position.oriOffestLeft = dot.offsetLeft;
+                            position.oriX = event.clientX;
+                            position.maxLeft = position.oriOffestLeft;
+                            position.maxRight = document.getElementById('processBarBg').offsetWidth - position.oriOffestLeft;
+
+                            //禁止默认事件（！！！）
+                            if (event) {
+                                event.preventDefault();
+
+                            }
+                            //禁止事件冒泡
+                            if (event) {
+                                event.stopPropagation();
+                            }
+
+                        }
+                    }
+
+                    function move(event) {
+                        if (flag) {
+                            var clientX = event.clientX;
+                            var length = clientX - position.oriX;//用现在的鼠标坐标-原来的点的坐标
+                            if (length > position.maxRight) {
+                                length = position.maxRight;
+                            } else if (length < -position.maxLeft) {
+                                length = -position.maxLeft;
+                            }
+                            var processBarBg = document.getElementById('processBarBg');
+                            var pgsWidth = parseFloat(window.getComputedStyle(processBarBg, null).width.replace('px', ''));
+                            var rate = (position.oriOffestLeft + length) / pgsWidth;
+                            audio.currentTime = audio.duration * rate;
+                            updateProgress();
+
+                        }
+
+                    }
+
+                    function end() {
+                        flag = false;
+                    }
+
+
+                }
+
+                volumeBarBg.addEventListener('mousedown', function (event) {
+
+                    var volumeHeight = parseFloat(window.getComputedStyle(volumeBarBg, null).height.replace('px', ''));
+                    rate = event.offsetY / volumeHeight;
+                    audio.volume = 1 - rate;
+                    volumeBar.style.height = rate * 100 + '%';
+
+
+                    if (rate == 1) {
+                        loudness.classList.remove("icon-yinliang");
+                        loudness.classList.add("icon-jingyin");
+                    }
+                }, false);
+
+                loudness.addEventListener('click', function (event) {
+                    if (rate != 1) {
+                        loudness.classList.remove("icon-yinliang");
+                        loudness.classList.add("icon-jingyin");
+                        rateCopy = rate;
+                        height = volumeBar.style.height;
+                        volumeBar.style.height = 80 + 'px';
+                        rate = 1;
+                        audio.volume = 1 - rate;
+                    } else {
+                        loudness.classList.remove("icon-jingyin");
+                        loudness.classList.add("icon-yinliang");
+                        rate = rateCopy;
+                        volumeBar.style.height = height;
+                        audio.volume = 1 - rate;
+                    }
+                });
+
+                music.addEventListener('click', function () {
+
+                    if (musicFrame.style.display == 'none') {
+                        musicFrame.style.display = 'block';
+                    } else {
+                        musicFrame.style.display = 'none';
+                    }
+
+                });
+                // deleteTable.addEventListener('click',function ()
+                // {
+                //     let param = new URLSearchParams()
+                //     param.append('musicId',musics[num]["musicId"]+"");
+                //     axios.post("http://localhost:8080/web-demo/musicCopy/deleteTable",param).then(function (response) {
+                //         while(musicListLi.firstChild)
+                //         {
+                //             musicListLi.removeChild(musicListLi.firstChild);
+                //         }
+                //
+                //     }).catch(function(error) {
+                //         // 请求失败，提示错误信息
+                //         console.error(error);
+                //     });
+                // });
+                likeTag.addEventListener('click',function ()
+                {         let param = new URLSearchParams()
+                    param.append('musicId',musics[num]["musicId"]+"");
+                    if(likeTag.classList.contains('icon-jushoucang'))
+                    {
+
+                        axios.post("http://localhost:8080/web-demo/musicCopy/likeAction",param).then(function (response) {
+                            likeTag.classList.remove('icon-jushoucang');
+                            likeTag.classList.add('icon-svg_nav_Like_press');
+                        }).catch(function(error) {
+                            // 请求失败，提示错误信息
+                            console.error(error);
+                        });
+                    }
+                    else
+                    {
+                        axios.post("http://localhost:8080/web-demo/musicCopy/removeLikeAction",param).then(function (response) {
+                            likeTag.classList.remove('icon-svg_nav_Like_press');
+                            likeTag.classList.add('icon-jushoucang');
+                        }).catch(function(error) {
+                            // 请求失败，提示错误信息
+                            console.error(error);
+                        });
+
+                    }
+
+
+                });
+                musicname.addEventListener('click',function()
+                {
+                    window.location.href = '/web-demo/song.html';
+                });
+
+
+
+
+
+
+
+
+                // 这里是一整个异步请求的结尾
+            }).catch(function (error) {
+                // 请求失败，提示错误信息
+                console.error(error);
+            });
+
+        }).catch(function(error) {
+            // 请求失败，提示错误信息
+            console.error(error);
+        });
     });
 
-</script>
-<script type="text/javascript" src="js/music.js"></script>
-<script>
-    alert("欢迎回来");
+
+
 </script>
 </body>
 </html>

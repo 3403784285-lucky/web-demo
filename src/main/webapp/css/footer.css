@@ -4,6 +4,7 @@ footer
     height: 80px;
     width: 100vw;
     padding: 0;
+
 }
 .footer_list
 {
@@ -16,18 +17,25 @@ footer
 {
     height: 80px;
     display: flex;
+    background-image: linear-gradient(to right, rgba(187, 222, 196, 0.29), rgba(234, 234, 236, 0.25));
 
 
 
 }
-.footer-btn a
+.footer-btn .iconfont
 {
     font-size: 39px;
     margin: 10px 20px;
 
 
 }
-.footer-btn a:hover
+#musicListLi li div
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.footer-btn .iconfont:hover
 {
     color:#43929e;
 
@@ -44,8 +52,10 @@ footer
 {
 
     font-size: 23px;
-    margin-top:15px;
+    margin-top: 15px;
     margin-left: 350px;
+
+
 
 }
 .footer-btn .loudness
@@ -66,12 +76,12 @@ footer
     line-height: 30px;
     overflow: hidden;
     white-space: nowrap;
+    cursor: pointer;
     text-overflow: ellipsis;
 }
 
-.footer-btn a div
+.footer-btn .iconfont .music-image
 {
-    background: url(../img/music7.png);
     height: 60px;
     width: 60px;
     font-size: 17px;
@@ -115,7 +125,7 @@ footer
     width: 400px;
 
 }
-
+/*设置了内嵌样式就设置不了外联样式了；*/
 .process-bar
 {
     background-color: #43929efc;
@@ -126,7 +136,7 @@ footer
 {
     line-height: 3px;
     color: #aba0a0;
-    font-size: 7px;
+
 }
 .process-bar-bg span
 {

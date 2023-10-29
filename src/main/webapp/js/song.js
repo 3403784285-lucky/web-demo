@@ -1,4 +1,9 @@
-const fileAddress = './lrc/yongyuanfeixingmoshi.lrc';
+var wheelMark=0;
+var img=document.getElementById('avatar');
+img.src=localStorage.getItem("image");
+document.getElementsByClassName('information')[0].innerHTML=localStorage.getItem("name");
+console.log("11111111111111111111");
+const fileAddress =musics[num]["song"];
 var lrcArray=[];
 fetch(fileAddress)
     .then(response => response.text())
@@ -13,11 +18,8 @@ fetch(fileAddress)
 
         lrcArray=parts;
         inputLrc();
-        document.getElementsByTagName('audio')[0].ontimeupdate=moveWheelJudge;
-
-
-
-
+        console.log("事件绑定啦");
+        audio.addEventListener('timeupdate',setPosition);
 
     })
     .catch(error => console.error(error));
@@ -42,7 +44,6 @@ function  getLrcObj(content)
 
 }
 
-
 function inputLrc()
 {
     for(let index=0;index<lrcArray.length;index++)
@@ -50,31 +51,40 @@ function inputLrc()
         var li=document.createElement('li');
         li.innerText=lrcArray[index].words;
         li.style.margin='10px auto 10px 20px';
+        li.addEventListener('click',function ()
+        {
+            document.getElementsByClassName('time-dot')[0].innerText = transTime(lrcArray[index].seconds);
+            audio.currentTime = lrcArray[index].seconds;
+        })
         document.getElementsByClassName('song-main')[0].appendChild(li);
 
     }
 }
+var wheelClockCopy;
 var i=0;
 function setPosition()
 {
-    var index=getLrcIndex();
-    var activeLi=document.getElementsByClassName('active')[0];
-   var songMain=document.getElementsByClassName('song-main')[0];
-   var songRoll=document.getElementsByClassName('song-roll')[0];
-   if(activeLi)
-   {
-      activeLi.classList.remove('active');
-       activeLi.style.fontSize=15+'px';
-       activeLi.style.color='black';
-       activeLi.style.fontWeight='normal';
 
-   }
-    songMain.children[index].classList.add('active');
-    activeLi=songMain.children[index];
-    activeLi.style.fontSize=17+'px';
-    activeLi.style.color='green';
-    activeLi.style.fontWeight='bolder';
-    songRoll.scrollTop=(activeLi.offsetTop+activeLi.clientHeight/2)-songRoll.clientHeight/2;
+        var index=getLrcIndex();
+        var activeLi=document.getElementsByClassName('active')[0];
+        var songMain=document.getElementsByClassName('song-main')[0];
+        var songRoll=document.getElementsByClassName('song-roll')[0];
+        if(activeLi)
+        {
+            activeLi.classList.remove('active');
+            activeLi.style.fontSize=16+'px';
+            activeLi.style.color='black';
+            activeLi.style.fontWeight='normal';
+
+        }
+        songMain.children[index].classList.add('active');
+        activeLi=songMain.children[index];
+        activeLi.style.fontSize=19+'px';
+        activeLi.style.color='green';
+        activeLi.style.fontWeight='bolder';
+        songRoll.scrollTop=(activeLi.offsetTop+activeLi.clientHeight/2)-songRoll.clientHeight/2;
+
+
 
 
 }
@@ -89,44 +99,39 @@ function  getLrcIndex()
         }
     }
 }
-var moveWheel1=true;
-var moveWheel2=false;
-var moveWheel3=false;
+
 var wheelClock;
 
 function stopWheel()
 {
 
         document.getElementsByClassName('split-border')[0].style.display='none';
-        moveWheel3=false;
-        moveWheel2=false;
+        audio.addEventListener("timeupdate", setPosition);
+        console.log("事件绑定啦");
+        if(clearTimeout(wheelClock))
+        {
+
+        };
 
 
 }
 document.getElementsByClassName('song-roll')[0].addEventListener('wheel',function ()
 {
-   moveWheel2=true;
-})
+
+   moveWheelJudge();
+});
 function moveWheelJudge()
 {
-    if(moveWheel2==false)
-    {
-        setPosition();
-    }
-    else if(moveWheel2==true)
-    {
-        if (moveWheel3==false)
-        {
             document.getElementsByClassName('split-border')[0].style.display='block';
-            moveWheel3=true;
-            setTimeout(stopWheel,3000);
+            if(wheelClock==null||!clearTimeout(wheelClock))
+            {
+                audio.removeEventListener("timeupdate", setPosition);
+                wheelClock=setTimeout(stopWheel,3000);
+                console.log("事件解绑啦");
 
-        }
-        else
-        {
-            clearTimeout(wheelClock);
-            wheelClock=setTimeout(stopWheel,3000);
-        }
+            }
 
-    }
 }
+
+
+

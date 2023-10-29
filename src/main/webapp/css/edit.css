@@ -33,19 +33,26 @@
 .part
 {
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .name-content
 {
     height: 25px;
     width: 500px;
     border-radius: 5px;
+    border: #8e9aa7 solid 1px;
+}
+input
+{
+    outline: none;
 }
 .birthday-content
 {
     width: 200px;
     height: 30px;
     border-radius: 5px;
+
+    border: #8e9aa7 solid 1px;
 }
 .introduction-content
 {
@@ -62,7 +69,7 @@
     overflow: hidden;
     width: 200px;
     height: 400px;
-    margin-left: 150px;
+    margin-left: 170px;
     margin-top: 20px;
 }
 .modify-image img
@@ -106,7 +113,7 @@
     line-height: 30px;
     width: 100px;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 50px;
     border-radius: 20px;
     border: #333333 solid;
     cursor: pointer;

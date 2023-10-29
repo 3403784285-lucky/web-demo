@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/editplaylist.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_ox2f1wjcyl.css">
 
 </head>
 <body>
@@ -28,8 +28,8 @@
                     <span>海棠花开</span>
                 </div>
                 <div>
-                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
-                    <a href="javascript:window.history.forward()" id="nextPage" class="next-page iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-fanhui"></a>
+
                 </div>
 
                 <div class="topbar-right-search">
@@ -38,8 +38,8 @@
                     </i>
                 </div>
                 <div class="person">
-                    <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
-                    <a class="information" href="person.html">微凉花开</a>
+                    <div class="image"><img id="avatar"/></div>
+                    <a class="information" href="person.html">未登录</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                             <div class="music-title">发现音乐</div>
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="music.html" >
                                         <i class="iconfont icon-remen"></i>
                                         <span>热门推荐</span>
                                     </a>
@@ -60,7 +60,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#">
+                                    <a href="rankList.html">
                                         <i class="iconfont icon-yinleliebiao"></i>
                                         <span>新歌排行榜</span>
                                     </a>
@@ -73,27 +73,56 @@
 
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="like.html" >
                                         <i class="iconfont icon-xihuan"></i>
                                         <span>我喜欢的音乐</span>
                                     </a>
-
                                 </li>
-
                                 <li>
-                                    <a href="#">
+                                    <a href="load.html">
                                         <i class="iconfont icon-xiazai"></i>
                                         <span>本地与下载</span>
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="collect.html">
                                         <i class="iconfont icon-ego-favorite"></i>
                                         <span>我的收藏</span>
                                     </a>
 
                                 </li>
+                                <li>
+                                    <a href="identify.html">
+                                        <i class="iconfont icon-OTCrenzheng"></i>
+                                        <span>歌手认证</span>
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="music-title">我的歌单</div>
+
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="editplaylist.html" >
+                                        <i class="iconfont icon-chuangjiangedan"></i>
+                                        <span>创建歌单</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="person.html">
+                                        <i class="iconfont icon-gedanbiaoqian"></i>
+                                        <span>歌单合集</span>
+                                    </a>
+
+                                </li>
+
+
+
                             </ul>
                         </li>
                     </ul>
@@ -107,18 +136,15 @@
                         <div style="border-radius: 5px;">歌单名：</div>
                         <input style="height: 30px;width: 500px;">
                     </div>
-                    <div style="display: flex;margin: 20px;">
-                        <div>标签:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
-                        <ul>
-
-                        </ul>
+                    <div style="display: flex;margin: 30px;margin-left:20px; ">
+                        <div>标签:&nbsp&nbsp&nbsp&nbsp&nbsp</div>
                         <div>
                             添加标签
                         </div>
                     </div>
-                    <div style="display: flex;margin: 30px 20px;">
+                    <div style="display: flex;margin: 40px 20px;">
                         <div>简介：</div>
-                        <textarea style="height: 80px;width: 500px;border-radius: 5px;"></textarea>
+                        <textarea style="height: 80px;width: 520px;border-radius: 5px;"></textarea>
                     </div>
                     <div style="display: flex;margin: 50px 20px;">
                         <div style="border-radius: 30px;background: #3DC07D; height: 30px;line-height:30px;width: 60px;color: #333333; margin-right: 100px;margin-left: 100px;">&nbsp&nbsp&nbsp保存</div>
@@ -126,9 +152,9 @@
                     </div>
                 </div>
                 <div class="edit-part2" style="height: 400px; width: 200px;">
-                    <img src="img/music5.png" style="height: 200px; width: 200px;margin-top: 60px; margin-bottom: 20px;margin-left: 20px;">
-                    <input type="file" style="display: none">
-                    <div style="border-radius: 20px; height: 30px;width: 80px;line-height:30px;border: solid black 1px;margin-left: 80px">
+                    <img class="cover" src="img/music5.png" style="height: 200px; width: 200px;margin-top: 60px; margin-bottom: 20px;margin-left: 20px;">
+                    <input  class="choose-image" type="file" style="display: none">
+                    <div  class="modify-button" style="border-radius: 20px; height: 30px;width: 80px;line-height:30px;border: solid black 1px;margin-left: 80px">
                         &nbsp&nbsp修改封面
                     </div>
                 </div>
@@ -139,40 +165,31 @@
     <footer>
         <div class="footer_list">
             <div class="footer-btn">
-                <a href="#">
-                    <div></div>
-                </a>
-                <ul><li class="china">微凉花开梦清扬</li></ul>
+                <div class="iconfont">
+                    <img  class="music-image"></img>
+                </div>
+                <ul><li class="china">未知</li></ul>
 
                 <div class="play-part">
-                    <a  href="#" class="like iconfont icon-jushoucang"></a>
-                    <a href="#" class="model iconfont icon-yinleliebiao"></a>
-                    <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
-                    <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+                    <div   class="like iconfont icon-jushoucang"></div>
+                    <div  class="model iconfont icon-yinleliebiao"></div>
+                    <div class="prev iconfont icon-shangyishou-yuanshijituantubiao"></div>
+                    <div   id="player" class="pause iconfont icon-zanting"></div>
                     <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
-                    <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+                    <div   class="next iconfont icon-xiayishou-yuanshijituantubiao"></div>
+
                     <div id="controlVolume">
                         <div id="volumeBarBgBorder">
                             <div id="volumeBarBg">
                                 <div id="volumeBar"></div>
                             </div>
                         </div>
-                        <a href="#" class="loudness iconfont icon-yinliang"></a>
+                        <div  class="loudness iconfont icon-yinliang"></div>
+
                     </div>
-                    <div class="music-frame">
+                    <div  class="music-list iconfont icon-ks3_music"></div>
 
-                        <ul class="music-broadcast">
-                            <div>
-                                当前播放
-                            </div>
-                            <li>
-
-                            </li>
-                        </ul>
-
-                        <a href="#" class="music-list iconfont icon-ks3_music"></a>
-                    </div>
-                    <audio preload="metadata">
+                    <audio>
                         <source  type="audio/mp3">
                     </audio>
                     <div class="audio-bottom">
@@ -182,6 +199,32 @@
                             <div class="process-bar" id="processBar"></div>
                         </div>
                         <span class="audio-length-total" id="totalTime">00:00</span>
+                    </div>
+                    <div class="music-frame">
+
+                        <div class="music-broadcast" style="margin-left: 20px;margin-top: 20px;">
+                            <div class="now-play" style="font-size: 20px;font-weight: bolder;margin-bottom: 20px;">
+                                当前播放
+                            </div>
+                            <div style="display: flex; line-height: 20px;margin-bottom: 10px; ">
+                                <div style="font-size: 13px;color: #a6b0ba; margin-right: 250px;" >
+                                    总共35首
+                                </div>
+                                <div class="delete-table" style="color: #7ba4ac;font-size: 15px;cursor: pointer;">
+                                    清空列表
+                                </div>
+                            </div>
+                            <div style="height: 1px;width: 100%;background: #d0d5ca;margin-bottom: 10px;">
+
+                            </div>
+                            <ul id="musicListLi" style="overflow-y: scroll;">
+
+
+                            </ul>
+
+                        </div>
+
+
                     </div>
 
 
@@ -194,19 +237,59 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+    //获取头像和名称
+    document.getElementById('avatar').src=localStorage.getItem("image");
+    document.getElementsByClassName('information')[0].innerHTML=localStorage.getItem("name");
+    //读取消息，要看是创建还是编辑，应该是编辑；
+    //根据点击事件来定
 
-    axios.post("http://localhost:8080/web-demo/musicServlet").then(function (response) {
+    //提交函数异步请求，提交之后要将数据库放到歌单列表里面
+    let param = new URLSearchParams();
+    param.append('refreshToken', localStorage.getItem('refreshToken'));
+    param.append('accessToken', localStorage.getItem('accessToken'));
+    axios.post("http://localhost:8080/web-demo/userCopy/modifyPlayListInfo",param).then(function (response) {
         var data=response.data;
-        var img=document.getElementById('avatar');
-        var name=document.getElementsByClassName('information')[0];
-        var array=data.split(" ");
-        img.src=array[0];
-        name.innerHTML=array[1];
+        if(data=="fail")
+        {
+            alert("歌单创建失败");
+            window.location.href = '/web-demo/login.html';
+
+        }
+        else
+        {
+            alert("歌单创建成功");
+            localStorage.setItem("accessToken",data["accessToken"]);
+            localStorage.setItem("refreshToken",data["refreshToken"]);
+            window.location.href = '/web-demo/person.html';
+
+
+        }
+
+
 
     }).catch(function(error) {
         // 请求失败，提示错误信息
         console.error(error);
     });
+
+    //头像选择函数
+    var chooseImage=document.getElementsByClassName('choose-image')[0];
+    var modifyButton=document.getElementsByClassName('modify-button')[0];
+    modifyButton.addEventListener('click',function()
+    {
+        chooseImage.click();
+    })
+    chooseImage.addEventListener('change',function ()
+    {
+        const file = chooseImage.files[0];
+        //这就是文件路径
+        const filePath = URL.createObjectURL(file);
+        document.getElementsByClassName('cover')[0].src=filePath;
+
+    })
+
+
+
 </script>
 <script type="text/javascript" src="js/music.js"></script>
 </body>

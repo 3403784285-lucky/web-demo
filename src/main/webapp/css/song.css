@@ -8,7 +8,8 @@
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(rgba(144, 142, 208, 0.51),#FFFFFF);
+    box-sizing: border-box;
+    background: linear-gradient(rgba(162, 213, 140, 0.55),#FFFFFF);
     /* 被设置固定定位的元素是不占位置的 */
 
 }
@@ -16,8 +17,8 @@
 .main-right .active-outer
 {
     margin-left: 110px;
-    width:380px ;
-    height: 380px;
+    width:310px ;
+    height: 310px;
     background: rgba(139, 150, 158, 0.49);
     border-radius: 200px;
     position:relative;
@@ -25,16 +26,16 @@
 }
 .active-picture
 {
-    width: 340px;
-    height: 340px;
+    width: 280px;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 200px;
     background: black;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
 
 }
 #song
@@ -54,26 +55,29 @@
 .split-border
 {
     position: absolute;
-    bottom: 340px;
+    bottom: 310px;
     height: 20px;
     width: 400px;
-    left: 100px;
+    margin-left: 80px;
+    left: 95px;
     display: none;
-    background: rgba(159, 177, 197, 0.16);
-    box-shadow: 0 0 10px 10px  rgba(159, 177, 197, 0.16);
+
+
 }
 
 .song-title
 {
-    margin-left: 200px;
+    margin-left: 240px;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     font-size: 20px;
+    font-family: 'YouYuan';
 
 }
 .song-main
 {
     list-style: none;
+    font-family: 'YouYuan';
 
 }
 
@@ -81,15 +85,27 @@
 {
     width: 485px;
     overflow-x:hidden;
-    margin-left: 50px;
+    margin-left: 100px;
+    font-size: 16px;
 }
 
 .active-image
 {
     animation: rotation 7s infinite linear;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius:190px ;
+}
+
+@keyframes rotation {
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(359deg);
+    }
 }
 .big-circle
 {
@@ -105,9 +121,13 @@
     position: relative;
     margin-bottom: 80px;
 
-
-
 }
+.rotateCircle {
+    transform: rotate(90deg);
+    transition: transform 1s;
+}
+
+
 .small-circle
 {
     background: white;
@@ -132,7 +152,6 @@
     width: 8px;
     background: white;
     z-index: 2;
-    animation: rotate 3s linear infinite;
     transform-origin:top ;
     /*transform: rotate(-90deg);*/
 
@@ -148,17 +167,10 @@
     transform: scale(1.5);
     z-index: 2;
 }
-@keyframes rotation
-{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
 
+.comment
+{
+    margin-left: 50px;
 }
 .comment-title
 {
@@ -167,24 +179,79 @@
     font-weight: bolder;
     margin-top: 30px;
     margin-bottom: 10px;
-    margin-left: 20px;
+
 
 
 }
 .comment-main
 {
 
-    width: 700px;
+    width: 900px;
     margin-left: 20px;
     padding: 10px;
-    border: rgba(155, 179, 149, 0.45) solid 1px;
+
 
 }
+.comment-author input
+{
+
+    width: 1000px;
+    padding: 10px;
+    border: rgba(155, 179, 149, 0.45) solid 1px;
+    outline: none;
+
+}
+.broadcast-comment
+{
+    color: rgba(130, 168, 146, 0.67);
+    position: absolute;
+    right: 4px;
+    top: 7px;
+    cursor: pointer;
+}
+.comment-author
+{
+    position: relative;
+}
+.comment-pop
+{
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    /*display: none;*/
+
+    z-index: 3;
+
+}
+.pop-content
+{
+    height: 200px;
+    width: 400px;
+    outline: none;
+}
+.pop-button
+{
+    position: absolute;
+    bottom: 15px;
+    right: 11px;
+    color: #bcd4bb;
+    cursor: pointer;
+
+}
+
 
 .content-decoration
 {
     display: flex;
     position: relative;
+}
+.comment-time-second
+{
+    font-size: 13px;
+    color: #a6b0ba;
+    margin-top: 10px;
+    margin-right: 520px;
+    margin-left: 50px;
 }
 .comment-time
 {
@@ -200,6 +267,12 @@
     margin-left: 20px;
 
 }
+.content-part-second
+{
+    display: flex;
+    margin-left: 50px;
+}
+
 .content-part img
 {
     height: 40px;
@@ -208,6 +281,15 @@
     margin-right: 10px;
 
 }
+.content-part-second img
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
 .comment-reply
 {
     color: #8e9aa7;
@@ -215,5 +297,25 @@
     height: 16px;
     bottom: 0;
     right: 0;
+    cursor: pointer;
+}
+.comment-shrink
+{
+    color: #8e9aa7;
+    position: absolute;
+    height: 16px;
+    bottom: 0;
+    right: 20px;
+    cursor: pointer;
+}
+#netName
+{
+    color: #5a9070;
+}
+.content-replyOwner
+{
+    color: #8e9aa7;
+    font-size: 14px;
+
 }
 

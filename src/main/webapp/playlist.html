@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>歌单界面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/playlist.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_yupj8m4h5yl.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_ox2f1wjcyl.css">
+
 </head>
 <body>
 
@@ -20,8 +22,8 @@
                     <span>海棠花开</span>
                 </div>
                 <div>
-                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
-                    <a href="javascript:window.history.forward()" id="nextPage" class="next-page iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+                    <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-fanhui"></a>
+
                 </div>
 
                 <div class="topbar-right-search">
@@ -30,8 +32,8 @@
                     </i>
                 </div>
                 <div class="person">
-                    <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
-                    <a class="information" href="person.html">微凉花开</a>
+                    <div class="image"><img id="avatar"/></div>
+                    <a class="information" href="person.html">未登录</a>
                 </div>
             </div>
         </div>
@@ -44,7 +46,7 @@
                             <div class="music-title">发现音乐</div>
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="music.html" >
                                         <i class="iconfont icon-remen"></i>
                                         <span>热门推荐</span>
                                     </a>
@@ -52,7 +54,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#">
+                                    <a href="rankList.html">
                                         <i class="iconfont icon-yinleliebiao"></i>
                                         <span>新歌排行榜</span>
                                     </a>
@@ -65,33 +67,61 @@
 
                             <ul class="main-left-subnav">
                                 <li>
-                                    <a href="#" >
+                                    <a href="like.html" >
                                         <i class="iconfont icon-xihuan"></i>
                                         <span>我喜欢的音乐</span>
                                     </a>
-
                                 </li>
-
                                 <li>
-                                    <a href="#">
+                                    <a href="load.html">
                                         <i class="iconfont icon-xiazai"></i>
                                         <span>本地与下载</span>
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="collect.html">
                                         <i class="iconfont icon-ego-favorite"></i>
                                         <span>我的收藏</span>
                                     </a>
 
                                 </li>
+                                <li>
+                                    <a href="identify.html">
+                                        <i class="iconfont icon-OTCrenzheng"></i>
+                                        <span>歌手认证</span>
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="music-title">我的歌单</div>
+
+                            <ul class="main-left-subnav">
+                                <li>
+                                    <a href="editplaylist.html" >
+                                        <i class="iconfont icon-chuangjiangedan"></i>
+                                        <span>创建歌单</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="person.html">
+                                        <i class="iconfont icon-gedanbiaoqian"></i>
+                                        <span>歌单合集</span>
+                                    </a>
+
+                                </li>
+
+
+
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div class="main-right">
                 <img class="avatar" src="img/music7.png"/>
                 <div class="brief-introduction" style="margin-right: 500px">
@@ -134,7 +164,7 @@
                         &nbsp&nbsp&nbsp&nbsp<div class="comment" style="margin-right: 810px">评论(13)</div>
                         <div  style="position: relative; ">
                             <i class="search iconfont icon-sousuo"style="position: absolute;right: 3px;top:3px;" ></i>
-                            <input class="search-small" type="text" style="border-radius: 10px;height: 20px">
+                            <input class="search-small" type="text" style="border-radius: 10px;height: 20px;border-color:white;outline: none;border-color: #9aceb5">
                         </div>
 
 
@@ -152,40 +182,31 @@
     <footer>
         <div class="footer_list">
             <div class="footer-btn">
-                <a href="#">
-                    <div></div>
-                </a>
-                <ul><li class="china">微凉花开梦清扬</li></ul>
+                <div class="iconfont">
+                    <img  class="music-image"></img>
+                </div>
+                <ul><li class="china">未知</li></ul>
 
                 <div class="play-part">
-                    <a  href="#" class="like iconfont icon-jushoucang"></a>
-                    <a href="#" class="model iconfont icon-yinleliebiao"></a>
-                    <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
-                    <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+                    <div   class="like iconfont icon-jushoucang"></div>
+                    <div  class="model iconfont icon-yinleliebiao"></div>
+                    <div class="prev iconfont icon-shangyishou-yuanshijituantubiao"></div>
+                    <div   id="player" class="pause iconfont icon-zanting"></div>
                     <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
-                    <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+                    <div   class="next iconfont icon-xiayishou-yuanshijituantubiao"></div>
+
                     <div id="controlVolume">
                         <div id="volumeBarBgBorder">
                             <div id="volumeBarBg">
                                 <div id="volumeBar"></div>
                             </div>
                         </div>
-                        <a href="#" class="loudness iconfont icon-yinliang"></a>
+                        <div  class="loudness iconfont icon-yinliang"></div>
+
                     </div>
-                    <div class="music-frame">
+                    <div  class="music-list iconfont icon-ks3_music"></div>
 
-                        <ul class="music-broadcast">
-                            <div>
-                                当前播放
-                            </div>
-                            <li>
-
-                            </li>
-                        </ul>
-
-                        <a href="#" class="music-list iconfont icon-ks3_music"></a>
-                    </div>
-                    <audio preload="metadata">
+                    <audio>
                         <source  type="audio/mp3">
                     </audio>
                     <div class="audio-bottom">
@@ -195,6 +216,32 @@
                             <div class="process-bar" id="processBar"></div>
                         </div>
                         <span class="audio-length-total" id="totalTime">00:00</span>
+                    </div>
+                    <div class="music-frame">
+
+                        <div class="music-broadcast" style="margin-left: 20px;margin-top: 20px;">
+                            <div class="now-play" style="font-size: 20px;font-weight: bolder;margin-bottom: 20px;">
+                                当前播放
+                            </div>
+                            <div style="display: flex; line-height: 20px;margin-bottom: 10px; ">
+                                <div style="font-size: 13px;color: #a6b0ba; margin-right: 250px;" >
+                                    总共35首
+                                </div>
+                                <div class="delete-table" style="color: #7ba4ac;font-size: 15px;cursor: pointer;">
+                                    清空列表
+                                </div>
+                            </div>
+                            <div style="height: 1px;width: 100%;background: #d0d5ca;margin-bottom: 10px;">
+
+                            </div>
+                            <ul id="musicListLi" style="overflow-y: scroll;">
+
+
+                            </ul>
+
+                        </div>
+
+
                     </div>
 
 

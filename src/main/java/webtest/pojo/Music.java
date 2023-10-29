@@ -6,28 +6,26 @@ public class Music {
     int musicId;
     String image;
     String name;
+    String likePersonId;
     String song;
     String singerId;
     String count;
     String commentCount;
     String time;
+    String totalTime;
 
-    public Music(int id, String playRange,String musicSrc,int musicId, String image, String name, String song, String singerId, String count, String commentCount, String time) {
-        this.id = id;
-        this.playRange = playRange;
-        this.musicSrc=musicSrc;
-        this.musicId=musicId;
-        this.image = image;
-        this.name = name;
-        this.song = song;
-        this.singerId = singerId;
-        this.count = count;
-        this.commentCount = commentCount;
-        this.time = time;
-    }
+
     public Music()
     {
 
+    }
+
+    public String getLikePersonId() {
+        return likePersonId;
+    }
+
+    public void setLikePersonId(String likePersonId) {
+        this.likePersonId = likePersonId;
     }
 
     public int getId() {
@@ -118,6 +116,14 @@ public class Music {
         this.time = time;
     }
 
+    public String getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(String totalTime) {
+        this.totalTime = totalTime;
+    }
+
     @Override
     public String toString() {
         return "Music{" +
@@ -127,11 +133,13 @@ public class Music {
                 ", musicId=" + musicId +
                 ", image='" + image + '\'' +
                 ", name='" + name + '\'' +
+                ", likePersonId='" + likePersonId + '\'' +
                 ", song='" + song + '\'' +
                 ", singerId='" + singerId + '\'' +
                 ", count='" + count + '\'' +
                 ", commentCount='" + commentCount + '\'' +
                 ", time='" + time + '\'' +
+                ", totalTime='" + totalTime + '\'' +
                 '}';
     }
 }

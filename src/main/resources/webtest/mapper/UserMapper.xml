@@ -5,6 +5,15 @@
 <!--namespace:名称空间-->
 <mapper namespace="webtest.mapper.UserMapper">
 
+    <insert id="submitCommentPerson" useGeneratedKeys="true" keyProperty="id">
+    <!--关于这个空的-->
+        insert into comments values (null,#{userId},null,#{createTime},#{songId},null,#{commentContent})
+    </insert>
+
+    <insert id="replyCommentPerson" useGeneratedKeys="true" keyProperty="id">
+        insert into comments values(null,#{userId},#{receiverId},#{createTime},#{songId},#{ancestorId},#{commentContent})
+    </insert>
+
 
     <select id="selectCountConcern" resultType="java.lang.Integer" >
 

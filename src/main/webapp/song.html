@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/left.css">
   <link rel="stylesheet" href="css/song.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_pd3wizhxi8.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4248113_ox2f1wjcyl.css">
 
 </head>
 <body>
@@ -22,8 +22,8 @@
           <span>海棠花开</span>
         </div>
         <div>
-          <a href="#" class="iconfont icon-shangyiyehoutuifanhui-xianxingyuankuang"></a>
-          <a href="#" id="page" class="iconfont icon-xiayiyeqianjinchakangengduo-xianxingyuankuang"></a>
+          <a href="javascript:window.history.back()" id="prePage" class="pre-page iconfont icon-fanhui"></a>
+
         </div>
 
         <div class="topbar-right-search">
@@ -32,8 +32,8 @@
           </i>
         </div>
         <div class="person">
-          <div class="image"><img id="avatar" src="./img/music10.jpg"/></div>
-          <a class="information" href="person.html">微凉花开</a>
+          <div class="image"><img id="avatar"/></div>
+          <a class="information" href="person.html">未登录</a>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
               <div class="music-title">发现音乐</div>
               <ul class="main-left-subnav">
                 <li>
-                  <a href="#" >
+                  <a href="music.html" >
                     <i class="iconfont icon-remen"></i>
                     <span>热门推荐</span>
                   </a>
@@ -54,7 +54,7 @@
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="rankList.html">
                     <i class="iconfont icon-yinleliebiao"></i>
                     <span>新歌排行榜</span>
                   </a>
@@ -67,33 +67,61 @@
 
               <ul class="main-left-subnav">
                 <li>
-                  <a href="#" >
+                  <a href="like.html" >
                     <i class="iconfont icon-xihuan"></i>
                     <span>我喜欢的音乐</span>
                   </a>
-
                 </li>
-
                 <li>
-                  <a href="#">
+                  <a href="load.html">
                     <i class="iconfont icon-xiazai"></i>
                     <span>本地与下载</span>
                   </a>
 
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="collect.html">
                     <i class="iconfont icon-ego-favorite"></i>
                     <span>我的收藏</span>
                   </a>
 
                 </li>
+                <li>
+                  <a href="identify.html">
+                    <i class="iconfont icon-OTCrenzheng"></i>
+                    <span>歌手认证</span>
+                  </a>
+
+                </li>
+
+
+              </ul>
+            </li>
+            <li>
+              <div class="music-title">我的歌单</div>
+
+              <ul class="main-left-subnav">
+                <li>
+                  <a href="editplaylist.html" >
+                    <i class="iconfont icon-chuangjiangedan"></i>
+                    <span>创建歌单</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="person.html">
+                    <i class="iconfont icon-gedanbiaoqian"></i>
+                    <span>歌单合集</span>
+                  </a>
+
+                </li>
+
+
+
               </ul>
             </li>
           </ul>
         </div>
       </div>
-
       <div class="main-right">
         <div class="song-cartoon">
           <div class="part-connect">
@@ -118,7 +146,7 @@
           <div class="song-title">嘻嘻哈哈过大年</div>
           <div class="split-border">
             <span class="time-dot">3:20</span>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="skip iconfont icon-bofangqi-bofang"></a>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="skip iconfont icon-bofangqi-bofang"></a>
           </div>
           <div class="song-outer">
             <div class="song-roll">
@@ -129,25 +157,39 @@
             </div>
           </div>
 
+        </div>
+        <div class="comment-pop">
+          <textarea class="pop-content"></textarea>
+          <div class="pop-button">发布</div>
 
         </div>
         <div class="comment">
           <div class="comment-title">
             全部评论
           </div>
-          <ul>
-            <li class="comment-main">
-              <div class="content-part">
-                <img src="./img/music11.jpg">
-                <div id="netName">酒归啊：</div>
-                <div class="content-reply"></div>
-                <div id="commentContent">谁还不是个宝宝，我也要《彩虹糖》！！！</div>
-              </div>
-              <div class="content-decoration">
-                <div class="comment-time">2020年5月26日 20:50</div>
-                <div class="comment-reply iconfont icon-huifu"></div>
-              </div>
-            </li>
+          <div class="comment-author">
+            <input type="text" placeholder="说点什么吧">
+            <a class="broadcast-comment">发布</a>
+          </div>
+          <ul id="commentFrame">
+<!--            <li class="comment-main">-->
+<!--              <ul class="list-comment-main">-->
+<!--                <div class="content-part">-->
+<!--                  <img src="img/music5.png">-->
+<!--                  <div id="netName">你好</div>-->
+<!--                  <div class="content-replyOwner"> 回复海归啊： </div>-->
+<!--                  <div id="commentContent">我真的很无语，很无语啊</div>-->
+<!--                </div>-->
+
+<!--                <div class="content-decoration">-->
+<!--                  <div class="comment-time">2023-09-01</div>-->
+<!--                  <div class="comment-shrink iconfont icon-shouqipinglun"></div>-->
+<!--                  <div class="comment-reply iconfont icon-huifu"></div>-->
+<!--                </div>-->
+<!--              </ul>-->
+
+<!--            </li>-->
+
           </ul>
 
         </div>
@@ -159,40 +201,31 @@
   <footer>
     <div class="footer_list">
       <div class="footer-btn">
-        <a href="#">
-          <div></div>
-        </a>
-        <ul><li class="china">微凉花开梦清扬</li></ul>
+        <div class="iconfont">
+          <img  class="music-image"></img>
+        </div>
+        <ul><li class="china">未知</li></ul>
 
         <div class="play-part">
-          <a  href="#" class="like iconfont icon-jushoucang"></a>
-          <a href="#" class="model iconfont icon-yinleliebiao"></a>
-          <a href="#" class="prev iconfont icon-shangyishou-yuanshijituantubiao"></a>
-          <a  href="#" id="player" class="pause iconfont icon-zanting"></a>
+          <div   class="like iconfont icon-jushoucang"></div>
+          <div  class="model iconfont icon-yinleliebiao"></div>
+          <div class="prev iconfont icon-shangyishou-yuanshijituantubiao"></div>
+          <div   id="player" class="pause iconfont icon-zanting"></div>
           <!-- <a  href="#" class="play iconfont icon-suspend"></a> -->
-          <a  href="#" class="next iconfont icon-xiayishou-yuanshijituantubiao"></a>
+          <div   class="next iconfont icon-xiayishou-yuanshijituantubiao"></div>
+
           <div id="controlVolume">
             <div id="volumeBarBgBorder">
               <div id="volumeBarBg">
                 <div id="volumeBar"></div>
               </div>
             </div>
-            <a href="#" class="loudness iconfont icon-yinliang"></a>
+            <div  class="loudness iconfont icon-yinliang"></div>
+
           </div>
-          <div class="music-frame">
+          <div  class="music-list iconfont icon-ks3_music"></div>
 
-            <ul class="music-broadcast">
-              <div>
-                当前播放
-              </div>
-              <li>
-
-              </li>
-            </ul>
-
-            <a href="#" class="music-list iconfont icon-ks3_music"></a>
-          </div>
-          <audio preload="metadata">
+          <audio>
             <source  type="audio/mp3">
           </audio>
           <div class="audio-bottom">
@@ -203,6 +236,32 @@
             </div>
             <span class="audio-length-total" id="totalTime">00:00</span>
           </div>
+          <div class="music-frame">
+
+            <div class="music-broadcast" style="margin-left: 20px;margin-top: 20px;">
+              <div class="now-play" style="font-size: 20px;font-weight: bolder;margin-bottom: 20px;">
+                当前播放
+              </div>
+              <div style="display: flex; line-height: 20px;margin-bottom: 10px; ">
+                <div style="font-size: 13px;color: #a6b0ba; margin-right: 250px;" >
+                  总共35首
+                </div>
+                <div class="delete-table" style="color: #7ba4ac;font-size: 15px;cursor: pointer;">
+                  清空列表
+                </div>
+              </div>
+              <div style="height: 1px;width: 100%;background: #d0d5ca;margin-bottom: 10px;">
+
+              </div>
+              <ul id="musicListLi" style="overflow-y: scroll;">
+
+
+              </ul>
+
+            </div>
+
+
+          </div>
 
 
         </div>
@@ -211,9 +270,366 @@
   </footer>
 </div>
 <!--如果运行不了顺序很重要-->
-
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="js/music.js"></script>
+<script>
+  var broadcastComment=document.getElementsByClassName('broadcast-comment')[0];
+  var commentFrame=document.getElementById('commentFrame');
+  var popButton=document.getElementsByClassName('pop-button')[0];
+  var commentPop=document.getElementsByClassName('comment-pop')[0];
+  var commentAuthor=document.getElementsByClassName('comment-author')[0];
+  var record;
+  var recordObject;
+   commentPop.style.display='none';
+  function getCurrentTime() {
+    var date = new Date();//当前时间
+    var year = date.getFullYear() //返回指定日期的年份
+    var month = repair(date.getMonth() + 1);//月
+    var day = repair(date.getDate());//日
+    var hour = repair(date.getHours());//时
+    var minute = repair(date.getMinutes());//分
+    var second = repair(date.getSeconds());//秒
+
+    //当前时间
+    var curTime = year + "-" + month + "-" + day
+            + " " + hour + ":" + minute + ":" + second;
+    return curTime;
+  }
+
+  //补0
+
+  function repair(i){
+    if (i >= 0 && i <= 9) {
+      return "0" + i;
+    } else {
+      return i;
+    }
+  }
+
+    broadcastComment.addEventListener('click',function()
+    {
+
+      let inPri=commentAuthor.getElementsByTagName('input')[0];
+      let formattedTime=getCurrentTime();
+      let songId=musics[num]["musicId"];
+      let param = new URLSearchParams();
+      param.append("songId",songId+"");
+      param.append("commentContent",inPri.value);
+      param.append("createTime",formattedTime);
+      param.append("refreshToken",localStorage.getItem("refreshToken"));
+      param.append("accessToken",localStorage.getItem("accessToken"));
+      //将他的信息记住
+      axios.post("http://localhost:8080/web-demo/userCopy/submitCommentPerson",param).then(function (response) {
+        let data=response.data;
+        if(data=="fail")
+        {
+          alert("评论发表失败");
+          window.location.href = '/web-demo/login.html';
+
+        }
+        else
+        {
+          alert("评论发表成功");
+          console.log(data["id"]);
+          localStorage.setItem("accessToken",data["accessToken"]);
+          localStorage.setItem("refreshToken",data["refreshToken"]);
+          let commentsDetail;
+          const commentMain = document.createElement('li');
+          commentMain.className = 'comment-main';
+
+          const listCommentMain = document.createElement('ul');
+          listCommentMain.className = 'list-comment-main';
+
+          const contentPart = document.createElement('div');
+          contentPart.className = 'content-part';
+
+          const img = document.createElement('img');
+          img.src=localStorage.getItem("image");
+          const netName = document.createElement('div');
+          netName.id = 'netName';
+          netName.textContent = localStorage.getItem("name");
+          const contentReplyOwner = document.createElement('div');
+          contentReplyOwner.className = 'content-replyOwner';
+          const commentContent = document.createElement('div');
+          commentContent.id = 'commentContent';
+          //有问题
+          commentContent.textContent =inPri.value;
+          contentPart.appendChild(img);
+          contentPart.appendChild(netName);
+          contentPart.appendChild(contentReplyOwner);
+          contentPart.appendChild(commentContent);
+
+          const contentDecoration = document.createElement('div');
+          contentDecoration.className = 'content-decoration';
+
+          const commentTime = document.createElement('div');
+          commentTime.className = 'comment-time';
+          commentTime.textContent = formattedTime;
+          const commentShrink = document.createElement('div');
+          commentShrink.className = 'comment-shrink iconfont icon-shouqipinglun';
+          commentShrink.addEventListener('click',function ()
+          {
+            if(commentsDetail==null)
+            {
+              let param1 = new URLSearchParams();
+              console.log(data);
+              param1.append("commentId",data["id"]+"");
+              axios.post("http://localhost:8080/web-demo/musicCopy/commentDetail",param1).then(function (response) {
+                commentsDetail=response.data;
+                console.log(commentsDetail+"细节怪");
+                for(let j=0;j<commentsDetail.length;j++)
+                {
+                  const commentMainCopy = document.createElement('li');
+                  commentMainCopy.className = 'comment-main';
+
+                  const listCommentMainCopy = document.createElement('ul');
+                  listCommentMainCopy.className = 'list-comment-main';
+
+                  const contentPartCopy = document.createElement('div');
+                  contentPartCopy.className = 'content-part-second';
+                  const imgCopy = document.createElement('img');
+                  imgCopy.src=commentsDetail[j]["userImage"];
+                  const netNameCopy = document.createElement('div');
+                  netNameCopy.id = 'netName';
+                  netNameCopy.textContent = commentsDetail[j]["userName"];
+                  const contentReplyOwnerCopy = document.createElement('div');
+                  contentReplyOwnerCopy.className = 'content-replyOwner';
+                  //返回的id
+                  if(data["id"]==commentsDetail[j]["receiverId"])
+                  {
+                    contentReplyOwnerCopy.textContent ="回复"+localStorage.getItem("name")+":";
+                  }
+                  else
+                  {
+                    for(let l=j-1;l>=0;l--)
+                    {
+                      if(commentsDetail[l]["id"]==commentsDetail[j]["receiverId"])
+                      {
+                        contentReplyOwnerCopy.textContent ="回复"+commentsDetail[l]["userName"]+":";
+                      }
+                    }
+
+                  }
+                  const commentContentCopy = document.createElement('div');
+                  commentContentCopy.id = 'commentContent';
+                  commentContentCopy.textContent =commentsDetail[j]["commentContent"];
+                  contentPartCopy.appendChild(imgCopy);
+                  contentPartCopy.appendChild(netNameCopy);
+                  contentPartCopy.appendChild(contentReplyOwnerCopy);
+                  contentPartCopy.appendChild(commentContentCopy);
+
+                  const contentDecorationCopy = document.createElement('div');
+                  contentDecorationCopy.className = 'content-decoration';
+
+                  const commentTimeCopy = document.createElement('div');
+                  commentTimeCopy.className = 'comment-time-second';
+                  commentTimeCopy.textContent = commentsDetail[j]["createTime"];
+                  const commentReplyCopy = document.createElement('div');
+                  commentReplyCopy.className = 'comment-reply iconfont icon-huifu';
+                  commentReplyCopy.addEventListener('click',function () {
+                    if (commentPop.style.display == 'none') {
+                      commentPop.style.display = 'block';
+                      //js对象里面怎么
+                      record=commentsDetail[j];
+                      recordObject=listCommentMain;
+                      commentPop.getElementsByTagName('textarea')[0].placeholder="回复"+commentsDetail[j]["userName"]+":";
+                    } else {
+                      commentPop.style.display = 'none';
+                    }
+                  });
+                  contentDecorationCopy.appendChild(commentTimeCopy);
+                  contentDecorationCopy.appendChild(commentReplyCopy);
+
+                  listCommentMainCopy.appendChild(contentPartCopy);
+                  listCommentMainCopy.appendChild(contentDecorationCopy);
+                  commentMainCopy.appendChild(listCommentMainCopy);
+                  listCommentMain.appendChild(commentMainCopy);
+                }
+
+              }).catch(function(error) {
+                // 请求失败，提示错误信息
+                console.error(error);
+              });
+            }
+            else
+            {
+              let k=2;
+
+              let length=listCommentMain.getElementsByClassName('list-comment-main').length;
+              while (listCommentMain.lastChild&&length+2!=k) {
+                listCommentMain.removeChild(listCommentMain.lastChild)
+                k++;
+              }
+              commentsDetail=null;
+            }
+          });
+          const commentReply = document.createElement('div');
+          commentReply.className = 'comment-reply iconfont icon-huifu';
+          commentReply.addEventListener('click',function () {
+            if (commentPop.style.display == 'none') {
+              commentPop.style.display = 'block';
+              recordObject=listCommentMain;
+              record=data;
+              commentPop.getElementsByTagName('textarea')[0].placeholder="回复"+localStorage.getItem("name")+":";
+            } else {
+              commentPop.style.display = 'none';
+            }
+          });
+          contentDecoration.appendChild(commentTime);
+          contentDecoration.appendChild(commentShrink);
+          contentDecoration.appendChild(commentReply);
+
+          listCommentMain.appendChild(contentPart);
+          listCommentMain.appendChild(contentDecoration);
+          commentMain.appendChild(listCommentMain);
+          commentFrame.appendChild(commentMain);
+        }
+
+    // 请求失败，提示错误信息
+
+      });
+      //这里这里
+      inPri.value='';
+
+
+    });
+    popButton.addEventListener('click',function()
+  {
+
+    let receiverId=record["id"]+"";
+    console.log(record+"测试11111111111111111111111111");
+    let createTime=getCurrentTime();
+    let songId=musics[num]["musicId"]+"";
+    let ancestorId;
+    if(record["ancestorId"]==0)
+    {
+      ancestorId=record["id"]+"";
+    }
+    else
+    {
+      ancestorId=record["ancestorId"]+"";
+    }
+    let commentContent=commentPop.getElementsByTagName('textarea')[0].value;
+    let param = new URLSearchParams();
+    param.append("accessToken",localStorage.getItem("accessToken"));
+    param.append("refreshToken",localStorage.getItem("refreshToken"));
+    param.append("receiverId",receiverId);
+    param.append("createTime",createTime);
+    param.append("userName",localStorage.getItem("name"));
+    param.append("songId",songId);
+    param.append("ancestorId",ancestorId)
+    param.append("commentContent",commentContent);
+    axios.post("http://localhost:8080/web-demo/userCopy/replyCommentPerson",param).then(function (response) {
+      let data=response.data;
+      console.log(data+"我真的笑死了");
+      if(data=="fail")
+      {
+        alert("评论回复失败");
+        window.location.href = '/web-demo/login.html';
+      }
+      else
+      {
+        localStorage.setItem("accessToken",data["accessToken"]);
+        localStorage.setItem("refreshToken",data["refreshToken"]);
+
+        alert("评论回复成功");
+        const commentMainCopy = document.createElement('li');
+        commentMainCopy.className = 'comment-main';
+
+        const listCommentMainCopy = document.createElement('ul');
+        listCommentMainCopy.className = 'list-comment-main';
+
+        const contentPartCopy = document.createElement('div');
+        contentPartCopy.className = 'content-part-second';
+
+        const imgCopy = document.createElement('img');
+        imgCopy.src=localStorage.getItem("image");
+        const netNameCopy = document.createElement('div');
+        netNameCopy.id = 'netName';
+        netNameCopy.textContent = localStorage.getItem("name");
+        const contentReplyOwnerCopy = document.createElement('div');
+        contentReplyOwnerCopy.className = 'content-replyOwner';
+        //返回的id
+        //没有保存名字，根本行不通；要先保存一下自己的名字
+        contentReplyOwnerCopy.textContent ="回复"+record["userName"]+":";
+        const commentContentCopy = document.createElement('div');
+        commentContentCopy.id = 'commentContent';
+        commentContentCopy.textContent =commentContent;
+        contentPartCopy.appendChild(imgCopy);
+        contentPartCopy.appendChild(netNameCopy);
+        contentPartCopy.appendChild(contentReplyOwnerCopy);
+        contentPartCopy.appendChild(commentContentCopy);
+
+        const contentDecorationCopy = document.createElement('div');
+        contentDecorationCopy.className = 'content-decoration';
+
+        const commentTimeCopy = document.createElement('div');
+        commentTimeCopy.className = 'comment-time-second';
+        commentTimeCopy.textContent = createTime;
+        const commentReplyCopy = document.createElement('div');
+        let listCommentMain=recordObject;
+        commentReplyCopy.className = 'comment-reply iconfont icon-huifu';
+        commentReplyCopy.addEventListener('click',function () {
+          if (commentPop.style.display == 'none') {
+            commentPop.style.display = 'block';
+            recordObject=listCommentMain;
+            record=data;
+            commentPop.getElementsByTagName('textarea')[0].placeholder="回复"+record["userName"]+":";
+
+          } else {
+            commentPop.style.display = 'none';
+          }
+        });
+        contentDecorationCopy.appendChild(commentTimeCopy);
+        contentDecorationCopy.appendChild(commentReplyCopy);
+
+        listCommentMainCopy.appendChild(contentPartCopy);
+        listCommentMainCopy.appendChild(contentDecorationCopy);
+        commentMainCopy.appendChild(listCommentMainCopy);
+        listCommentMain.appendChild(commentMainCopy);
+        //这里有点问题
+        //如果是一级评论，将取得的评论对象添加到一级评论，否则只加到二级评论
+        //如果是二级评论的回复事件，则将二级评论的祖先评论对象记录下来；
+
+
+      }
+
+    }).catch(function(error) {
+      // 请求失败，提示错误信息
+      console.error(error);
+    });
+    commentPop.style.display='none';
+    commentPop.getElementsByTagName('textarea')[0].value='';
+
+
+  });
+  function observe(obj, key, callback) {
+    let value = obj[key];
+    Object.defineProperty(obj, key, {
+      get: function() {
+        return value;
+      },
+      set: function(newValue) {
+        if (newValue !== value) {
+          value = newValue;
+          callback(newValue);
+        }
+      }
+    });
+  }
+
+  observe(window, 'num', function(newValue) {
+    reloadScript();
+
+  });
+  function reloadScript() {
+    let script = document.createElement('script');
+    script.src = 'js/songAsk.js'; // 将此处替换为你的js文件路径
+    document.body.appendChild(script);
+  }
+
+</script>
+<script type="text/javascript" src="js/songAsk.js"></script>
 <script type="text/javascript" src="js/song.js"></script>
 </body>
 </html>

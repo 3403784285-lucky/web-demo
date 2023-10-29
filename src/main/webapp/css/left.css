@@ -1,23 +1,30 @@
 /* 左侧导航栏 */
 .main-left
 {
-    width: 220px;
+    width: 200px;
     height: 630px;
+
 
 }
 
 .item-left
 {
     position: fixed;
-    background-color: #f0f0f0;
-    width: 220px;
-    height: 630px
+    background: linear-gradient(rgba(189, 217, 181, 0.23),#FFFFFF);
+    width: 200px;
+    height: 630px;
+
+}
+.item-left ul
+{
+    margin-left: 15px;
 }
 .music-title
 {
     padding: 8px 0px;
     color: #a59c9c;
     font-size: 13px;
+    margin-left: 10px;
 
 }
 .main-left-subnav li
@@ -30,6 +37,8 @@
 .main-left-subnav li a
 {
     display: block;
+    width: 127px;
+    border-radius: 10px;
 }
 .main-left-subnav li i
 {
